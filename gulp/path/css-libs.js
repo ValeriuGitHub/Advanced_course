@@ -1,1 +1,1 @@
-module.exports = [];
+module.exports = ['font-awesome/css/font-awesome.min.css'];

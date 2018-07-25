@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-sass": "^4.0.1"
   },
