@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+%list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@function rem($px) {
+    @return $px / $font-size + 0rem;
+=======
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+%list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@function rem($px) {
+    @return $px / $font-size + 0rem;
+>>>>>>> d85e5619877bf7eca597cf2bed6f85ae554a8629
+}

@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+$font-size: 16px; // variable for @rem function (see _misc.scss);
+$transition: 300ms;
+// Basic stylesheets
+@import "./tags.scss";
+@import "./misc.scss"
+
+// Page parts
+
+// Site pages styles
+=======
+$font-size: 16px; // variable for @rem function (see _misc.scss);
+$transition: 300ms;
+// Basic stylesheets
+@import "./_misc.scss";
+@import "./fonts.scss";
+@import "./icons"; // necessary for svg sprites
+@import "./tags.scss";
+@import "./style.scss";
+
+// Page parts
+@import './parts/header.scss';
+@import './parts/nav.scss';
+@import './parts/sidebar.scss';
+@import './parts/footer.scss';
+
+// Site pages styles
+@import "./pages/other.scss";
+>>>>>>> d85e5619877bf7eca597cf2bed6f85ae554a8629
