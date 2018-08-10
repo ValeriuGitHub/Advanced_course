@@ -2,4 +2,64 @@ extends ../templates/page.pug
 block variables
     - var title = "Welcome";
 block content
-    h1 welcome pug
+    section.welcome
+        .welcome__button-wrapper
+            a(href="#").welcome__button Авторизоваться
+        div.welcome__form
+            div.welcome__avatar-circle
+                img(src='./img/avatar.jpg').welcome__avatar
+            h1.welcome__title Владимир Астахов
+            div.welcome__subtitle Личний сайт веб-разработчика
+            ul.welcome-icons.welcome-icons_green
+                li.welcome-icons__item_center.welcome-icons__item_vk
+                    a(href="#")
+                        i.fa.fa-vk(aria-hidden="true")
+                li.welcome-icons__item_center.welcome-icons__item_github
+                    a(href="#")
+                        i.fa.fa-github-alt(aria-hidden="true")
+                li.welcome-icons__item_center.welcome-icons__item_linkedin
+                    a(href="#")
+                        i.fa.fa-linkedin(aria-hidden="true")
+            ul.welcome__navigation
+                li.welcome__navigation-padding
+                    a(href="#").item__navigation.item__navigation-line  Мои работи
+                li.welcome__navigation-padding
+                    a(href="#").item__navigation.item__navigation-line Обо мне
+                li.welcome__navigation-padding
+                    a(href="#").item__navigation Блог    
+        .login__form
+            +heading("h1","login__form-title") Авторизуйтесь
+            form.login__form
+                ul.login__list-input
+                    li.login-input__item
+                        .login__item-square
+                            i.fa.fa-user(aria-hidden="true")
+                        input(type="text", placeholder="Логин", required, name="name", autocomplete="on").login__item-input
+                    li.login-input__item
+                        .login__item-square
+                            i.fa.fa-key(aria-hidden="true")
+                        input(type="password", placeholder="Пароль", required, name="Email", autocomplete="on").login__item-input
+                    li.login-input__item
+                        input(type="checkbox", required, name="checkbox", id="checkbox").login__item-input
+                        label(for="checkbox")
+                            | Я человек
+                    li.login-input__item
+                        p.login-input__text Вы точно не робот?
+                        input(type="radio", name="yes", id="yes").login__item-input
+                        label(for="yes")
+                            | Да
+                        input(type="radio", name="notSure", id="notSure").login__item-input
+                        label(for="notSure")
+                            | Не уверен
+                ul.login__navigation-list
+                    li.login__navigation-item
+                        a(href="#")
+                            .login__comeback.login__comeback-line
+                    li.login__navigation-item
+                        a(href="#")
+                            button(type="submit" value="Войти").login-button__enter.button__item-line-left
+        p.welcome__text-bottom 
+            span.welcome__text-bottom_line-after_display-block © Владимир Астахов 
+            | создано с любовью в LoftSchool | 2016
+
+

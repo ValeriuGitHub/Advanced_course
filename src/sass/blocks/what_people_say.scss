@@ -1,0 +1,294 @@
+.what-people-say {
+	background: url(./img/what_people-say.jpg) center center / cover no-repeat;
+}
+
+.what-people-say__title {
+    @extend %big_title;
+    background: url(./img/about_header.png) center center /  no-repeat, url(./img/about.png) center center /  no-repeat;
+    text-align: center;
+    padding: 60px 120px 43px;
+    width: 516px;
+    margin: 0 auto;
+    line-height: 1.1;
+
+    @include laptops {
+    	width: 540px;
+    }
+
+    @include tablets {
+    	width: 100%;
+    	font-size: 60px;
+    	padding: 60px 20px 43px;
+    }
+
+    @include phones {
+    	padding: 30px 120px 25px;
+    	background-size: 90%;
+    	font-size: 35px;
+    }
+}
+
+.what-people-say__title span {
+	position: relative;
+}
+
+.what-people-say__title span:after, .what-people-say__title span:before {
+	@extend %before_after_line;
+	top: 25%;
+
+	@include tablets {
+		top: 50%;
+	}
+}
+
+.what-people-say__title span:after {
+	left: -40px;
+}
+
+.what-people-say__title span:before {
+	right: -85px;
+
+	@include tablets {
+		right: -40px;
+	}
+
+	@include phones {
+		right: -60px;
+	}
+}
+
+.review {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #455a64;
+	@extend %clearfix;
+
+	@include tablets {
+		justify-content: flex-start;
+    	margin-left: 25px;
+	}
+
+	@include phones {
+		display: block;
+		margin-left: 10px;
+	}
+}
+
+.review-left {
+	margin-right: 35px;
+
+	@include tablets {
+		margin-right: 32px;
+	}
+
+	@include phones {
+		margin-right: 0px;
+	    margin-bottom: 115px;
+	}
+}
+
+.review-left__text {
+	max-width: 365px;
+    margin-bottom: 32px;
+
+    @include phones {
+    	max-width: 100%;
+    }
+}
+
+.review-right__text {
+	max-width: 350px;
+    margin-bottom: 25px;
+
+    @include tablets {
+    	margin-bottom: 32px;
+    }
+
+    @include phones {
+    	max-width: 100%;
+    }
+}
+
+.review__avatar-circle {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+.review-right__quote, .review-left__quote {
+	color: #373e42;
+	font-size: 36px;
+	opacity: 0.2;
+
+	@include phones {
+		text-align: center;
+	}
+}
+
+.review-left__title, .review-left__description, .review-right__title, .review-right__description {
+    margin-left: 23px;
+    font-size: 16px;
+    color: #20b5a1;
+
+    @include phones {
+    	float: none;
+    }
+}
+
+.review-left__description {
+
+	@include phones { 
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+
+.review-right__title, .review-left__title {
+	margin-top: 18px;
+	font-weight: 700;
+}
+
+.review_float {
+	float: left;
+
+
+}
+
+.what-people-say__form {
+	width: 380px;
+	border-radius: 5px;
+	margin: 68px auto;
+	margin-bottom: 55px;
+	padding-top: 30px;
+	background: url(./img/works_blur.jpg) center center / cover no-repeat;
+
+	@include tablets {
+		margin-bottom: 115px;
+	}
+
+	@include phones {
+		margin-bottom: 40px;
+	}
+}
+
+.form__item {
+	margin: 20px;
+}
+
+.form__item-input {
+    border-radius: 5px;
+	width: 100%;
+	padding: 16.5px 20px 16.5px 20px;
+	color: rgba(55, 62, 66, 0.502);
+	border: none;
+}
+
+.form__item-textarea {
+	min-width: 340px;
+	min-height: 140px;
+	border-radius: 5px;
+	border: none;
+	padding: 15.5px 20px 15.5px 20px;
+}
+
+.link-up a {
+	color: #b3ced1;
+}
+
+.link-up {
+	text-align: center;
+	padding-bottom: 70px;
+	font-size: 31px;
+
+	@include laptops {
+		font-size: 26px;
+	}
+
+	@include tablets {
+		font-size: 32px;
+	}
+
+	@include phones {
+		padding-bottom: 40px;
+	}
+}
+
+.link-up a:hover {
+	color: #fff;
+}
+
+.form__title {
+	@extend %title_center;
+
+	@include phones {
+		font-size: 25.4px;
+	}
+
+	@include tablets {
+		font-size: 30px;
+	}
+}
+
+.form__title span {
+	position: relative;
+}
+
+.form__title span:after, .form__title span:before {
+	@extend %before_after_line;
+	top: 50%;
+}
+
+.form__title span:after {
+	left: -40px;
+}
+
+.form__title span:before {
+	right: -40px;
+}
+
+.list__button {
+	display: flex;
+	background-color: #08ac99;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-top: 20px;
+}
+
+.button__item {
+    padding: 14px 57.6px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button__item-reset {
+	border-bottom-right-radius: 5px;
+	background-color: #26bbaa;
+}
+
+.button__item-send {
+	border-bottom-left-radius: 5px;
+	background-color: #268c8b;
+}
+
+.button__item-send:hover {
+	background-color: #7aa9d1;
+}
+
+.button__item-reset:hover {
+	background-color: #63b0f2;
+}
+
+.button__item-line {
+	border-right: 1px solid #82cfc9;
+}
+
+.button__item_line-left {
+	border-left: 1px solid #55919e;
+}
+

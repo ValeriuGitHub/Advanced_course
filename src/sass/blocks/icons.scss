@@ -1,0 +1,22 @@
+.icons a {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.icons__item-vk a:hover {
+	color: #fff;
+}
+
+.icons__item-github a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.icons__item-linkedin a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.icons-footer {
+	@include tablets {
+    	margin: 0 auto;
+   	    margin-top: 15px;
+	}
+}

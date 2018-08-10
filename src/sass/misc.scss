@@ -6,12 +6,63 @@
     }
 }
 
+%before_after_line {
+    content: "";
+    position: absolute;
+    width: 22px;
+	height: 5px;
+	background-color: rgba(55, 62, 66, 0.2);
+	top: 50%;
+}
+
 %list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+%title {
+    font-family: 'Bernier';
+    font-size: 35px;
+    color: #455a64
+}
+
+%title_center {
+    font-family: 'Bernier';
+    font-size: 35px;
+    text-align: center;
+    color: #455a64
+}
+
+%big_title {
+    font-family: 'Bernier';
+    font-size: 63px;
+    color: #373e42;
+}
+
+%medium_green {
+    font-weight: 500;
+    color: #20b5a1;
+}
+
 @function rem($px) {
     @return $px / $font-size + 0rem;
+}
+
+@mixin laptops() {
+    @media screen and (max-width: 1352px) {
+        @content;
+    }
+}
+
+@mixin tablets() {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin phones() {
+    @media screen and (max-width: 527px) {
+        @content;
+    }
 }

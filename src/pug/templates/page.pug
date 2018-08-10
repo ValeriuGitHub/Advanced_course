@@ -1,3 +1,5 @@
+include ../mixins/mixins.pug
+
 block variables
 doctype html
 html(lang="en")
@@ -5,9 +7,10 @@ html(lang="en")
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title #{title}
-        // link(rel='stylesheet' href='../sass/libs.min.css')
+        link(rel='stylesheet' href='libs.min.css')
         link(rel='stylesheet' href='main.css')
     body
         block content
-        // script(src='../js/libs.min.js')
-        // script(src='main.js')
+        script(src='libs.min.js')
+        script(src='main.js')
+        

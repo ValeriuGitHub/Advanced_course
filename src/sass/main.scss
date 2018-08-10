@@ -1,10 +1,21 @@
 $font-size: 16px; // variable for @rem function (see _misc.scss);
 $transition: 300ms;
 // Basic stylesheets
+@import "misc.scss";
 @import "tags.scss";
-@import "misc.scss"
-
+@import "setups.scss";
+@import "style.scss";
 // Page parts
-
+@import "./blocks/header.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/icons.scss";
+@import "./blocks/about.scss";
+@import "./blocks/triangle.scss";
+@import "./blocks/circles.scss";
+@import "./blocks/map.scss";
+@import "./blocks/blog.scss";
+@import "./blocks/portfolio.scss";
+@import "./blocks/what_people_say.scss";
 // Site pages styles
+@import "./pages/index.scss";
 

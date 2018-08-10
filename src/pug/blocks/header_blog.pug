@@ -1,0 +1,16 @@
+header.header-blog#header
+    div.header-left
+        include icons.pug
+    div.header-center.blog__header-center    
+        div.header-center__circle
+            img(src='./img/avatar.jpg').header-center__circle_img
+        +heading("h1","blog-header__title") Блог
+        div.blog-header__subtitle Статьи, которые я написал
+        div.header-center__arrow-down.blog-header-center__arrow-down 
+            a(href="#scroll")
+                i.fa.fa-chevron-down(aria-hidden="true")
+    div.header-right
+        a(href="#")
+            div.header-right__hamburger
+            div.header-right__hamburger
+            div.header-right__hamburger

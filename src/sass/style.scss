@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.eot');
+    src: url('fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/Roboto-Regular.woff') format('woff'),
+        url('fonts/Roboto-Regular.ttf') format('truetype'),
+        url('fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.eot');
+    src: url('fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Bold.woff2') format('woff2'),
+        url('fonts/Roboto-Bold.woff') format('woff'),
+        url('fonts/Roboto-Bold.ttf') format('truetype'),
+        url('fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light.eot');
+    src: url('fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Light.woff2') format('woff2'),
+        url('fonts/Roboto-Light.woff') format('woff'),
+        url('fonts/Roboto-Light.ttf') format('truetype'),
+        url('fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Medium.eot');
+    src: url('fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Medium.woff2') format('woff2'),
+        url('fonts/Roboto-Medium.woff') format('woff'),
+        url('fonts/Roboto-Medium.ttf') format('truetype'),
+        url('fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BERNIER Distressed';
+    src: url('fonts/BERNIERDistressed-Regular.eot');
+    src: url('fonts/BERNIERDistressed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BERNIERDistressed-Regular.woff2') format('woff2'),
+        url('fonts/BERNIERDistressed-Regular.woff') format('woff'),
+        url('fonts/BERNIERDistressed-Regular.ttf') format('truetype'),
+        url('fonts/BERNIERDistressed-Regular.svg#BERNIERDistressed-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BERNIER Shade';
+    src: url('fonts/BERNIERShade-Regular.eot');
+    src: url('fonts/BERNIERShade-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BERNIERShade-Regular.woff2') format('woff2'),
+        url('fonts/BERNIERShade-Regular.woff') format('woff'),
+        url('fonts/BERNIERShade-Regular.ttf') format('truetype'),
+        url('fonts/BERNIERShade-Regular.svg#BERNIERShade-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BERNIER';
+    src: url('fonts/BERNIERRegular-Regular.eot');
+    src: url('fonts/BERNIERRegular-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BERNIERRegular-Regular.woff2') format('woff2'),
+        url('fonts/BERNIERRegular-Regular.woff') format('woff'),
+        url('fonts/BERNIERRegular-Regular.ttf') format('truetype'),
+        url('fonts/BERNIERRegular-Regular.svg#BERNIERRegular-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// For placeholder
+input::-moz-placeholder { color: rgba(55, 62, 66, 0.502) }
+input::-webkit-input-placeholder { color: rgba(55, 62, 66, 0.502); }
+textarea {color: rgba(55, 62, 66, 0.502) }
+textarea::-moz-placeholder { color: rgba(55, 62, 66, 0.502) }
+textarea::-webkit-input-placeholder { color: rgba(55, 62, 66, 0.502); }
+textarea {font-family: "Roboto";}
+textarea::-moz-placeholder {font-family: "Roboto";}
+textarea::-webkit-input-placeholder {font-family: "Roboto";}
+
+// For input
+input {outline:none;}
+textarea{outline: none;}

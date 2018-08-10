@@ -5,6 +5,10 @@ module.exports = function () {
 			.pipe($.gp.autoprefixer())
 			.pipe($.gp.cssbeautify())
 			.pipe($.gp.cssmin())
+			.pipe($.gp.cssUnit({
+				type	 : 'px-to-rem',
+				rootSize :  16
+			}))
 			.pipe($.gulp.dest('build'))
 			.pipe($.browserSync.stream())
 	})

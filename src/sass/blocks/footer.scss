@@ -1,0 +1,145 @@
+.footer {
+	background-color: #555b5e;
+	width: 100%;
+	padding: 17px 30px;
+
+	@include tablets {
+		padding-bottom: 1px;
+	}
+
+	@include phones {
+		padding: 17px 0px;
+		padding-bottom: 1px;
+	}
+}
+
+.footer-top {
+	padding-bottom: 20px;
+	display: flex;
+    border-bottom: 1px solid #61676a;
+
+    @include tablets {
+    	display: block;
+    }
+}
+
+.footer_top-right {
+	width: 50%;
+	justify-content:flex-end;
+	display: flex;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.footer_top-left {
+	width: 50%;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.link__item_color-white a {
+	color: #fff;
+}
+
+.link__item_color-white a:hover {
+	color: #00bfa5;
+}
+
+.footer-bottom {
+	display: flex;
+	color: rgba(255, 255, 255, 0.5);
+	font-weight: 300;
+
+    @include tablets {
+    	display: block;
+    }
+}
+
+.footer_bottom-left {
+	width: 50%;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.footer_bottom-left__text {
+	width: 500px;
+    margin-top: 11px;
+    line-height: 1.4;
+    margin-bottom: 13px;
+
+    @include tablets {
+        margin: 0 auto;
+    	text-align: center;
+    	margin-top: 11px;
+	    margin-bottom: 13px;
+	    width: 92%;
+    }
+}
+
+.footer_bottom-right {
+	width: 50%;
+	justify-content:flex-end;
+	display: flex;
+	margin-top: 8px;
+
+	@include tablets {
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+
+	@include phones {
+		width: 80%;
+    	margin: 0 auto;
+	}
+}
+
+.icons__item-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #6d7f80;
+    text-align: center;
+    line-height: 32px;
+    display: inline-block;
+}
+
+.icons__item-circle:hover {
+	background: #fff;
+	color: #53595d;
+}
+
+.icons__item-footer {
+	display: inline-block;
+    margin-top: 6px;
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+.link__item {
+	display: inline-block;
+    margin-top: 11px;
+    margin-left: 32px;
+
+    @include phones {
+    	margin-left: 10px;
+    }
+}
+
+.link__item:first-child {
+	margin-left: 0px;
+}
+
+.link__list {
+	@include tablets {
+		text-align: center;
+		font-weight: 500;
+	}
+}

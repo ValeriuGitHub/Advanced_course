@@ -1,8 +1,28 @@
-footer#footer
-	div.footer_top_left
-	div.footer_top_right
-		include icons.pug
-	div.footer_bottom_left
-		p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-	div.footer_bottom_right
-		p © Владимир Астахов | создано с любовью в LoftSchool | 2016
+footer.footer#footer
+    div.footer-top
+        div.footer_top-left
+            ul.link__list
+                li.link__item.link__item_color-white
+                    a(href="#") Мои работы
+                li.link__item.link__item_color-white
+                    a(href="#") Обо мне
+                li.link__item.link__item_color-white
+                    a(href="#") Блог
+                li.link__item.link__item_color-white
+                    a(href="#") Авторизация
+        div.footer_top-right
+            ul.icons.icons-footer
+                li.icons__item-footer
+                    a(href="#").icons__item-circle.icons__item-vk
+                        i.fa.fa-vk(aria-hidden="true")
+                li.icons__item-footer
+                    a(href="#").icons__item-circle.icons__item-github
+                        i.fa.fa-github-alt(aria-hidden="true")
+                li.icons__item-footer
+                    a(href="#").icons__item-circle.icons__item-linkedin
+                        i.fa.fa-linkedin(aria-hidden="true")
+    div.footer-bottom        
+        div.footer_bottom-left
+            p.footer_bottom-left__text Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+        div.footer_bottom-right
+            p © Владимир Астахов | создано с любовью в LoftSchool | 2016

@@ -1,0 +1,41 @@
+section.what-people-say
+    +heading("h1","what-people-say__title") Что обо мне говорят
+    .review
+        .review-left
+            .review-left__quote
+                i.fa.fa-quote-left(aria-hidden="true")
+            p.review-left__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .review__avatar-circle
+                img(src="./img/works_avatar-left.jpg")
+            .review_float
+                h2.review-left__title Ковальчук Дмитрий
+                .review-left__description основатель Loftschool
+        .review-right
+            .review-right__quote
+                i.fa.fa-quote-left(aria-hidden="true")
+            p.review-right__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .review__avatar-circle
+                img(src="./img/works_avatar-right.jpg")
+            .review_float
+                h2.review-right__title Сабанцев Владимир
+                .review-right__description преподаватель
+    .what-people-say__form
+        +heading('h1',"form__title") Связаться со мной
+        form
+            ul.list__form
+                li.form__item
+                    input(type="text", placeholder="Имя", required, name="name", autocomplete="on").form__item-input
+                li.form__item
+                    input(type="email", placeholder="Email", required, name="Email", autocomplete="on").form__item-input
+                li.form__item
+                    textarea(placeholder="Ваше сообщение").form__item-textarea
+            ul.list__button
+                li
+                    a(href="#")
+                        button(type="submit" value="Отправить").button__item.button__item-line.button__item-send
+                li
+                    a(href="#")
+                        button(type="reset" value="Очистить").button__item.button__item-reset.button__item-line-left
+    .link-up
+        a(href="#header")
+            i.fa.fa-chevron-up(aria-hidden="true")

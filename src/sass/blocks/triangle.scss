@@ -1,0 +1,34 @@
+.triangle {
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	bottom: 100%;
+
+  &_fill {
+
+	&_white {
+		fill: #efeee9;
+	}
+
+	&_beige {
+		fill: #eeebdf;
+		left: 0px;
+	}
+
+	&_abosulutely-white {
+		fill: #fff;
+	}
+
+	&_grey {
+		fill: #faf8f0;
+	}
+
+  }
+
+}
+
+.triangle_fill_beige {
+	@include tablets {
+	    fill: #efeee9;
+	}
+}
