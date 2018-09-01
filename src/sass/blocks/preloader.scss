@@ -1,0 +1,76 @@
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 9999;
+	background: #26bbaa;
+	visibility: visible;
+	opacity: 1;
+	
+
+	&__spinner {
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%)
+	}
+
+	&__percents {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+	}
+
+	&__animation {
+		width: 150px;
+		height: 150px;
+		position: relative;
+		animation: spin 1.5s linear infinite;
+
+	&,
+	&:before,
+	&:after { 
+		content: "";
+		display: block;
+		position: absolute;
+		border: 3px solid transparent;
+		border-radius: 50%;
+		border-top-color: #fff;
+		// animation: spin 3s linear infinite;
+	}
+	&:before {
+			$margin: 13px;
+
+			top: $margin;
+			left: $margin;
+			bottom: $margin;
+			right: $margin;
+			// animation: spin 2.9s linear infinite;
+		}
+		&:after {
+			$margin: 5px;
+
+			top: $margin;
+			left: $margin;
+			bottom: $margin;
+			right: $margin;
+			// animation: spin 3.1s linear infinite;
+		}
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

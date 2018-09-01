@@ -24,13 +24,17 @@
 	display: block;
 }
 
-.welcome__form {
+.window__form {
     border-radius: 5px;
-    background-color: rgba(252, 252, 252, 0.85);
     width: 380px;
     margin: auto auto;
     padding-top: 40px;
     text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	background-color: rgba(252, 252, 252, 0.85);
+    transition: 1s;
+    color: #455a64;
 
     @include tablets {
     	width: 400px;
@@ -41,12 +45,31 @@
     }
 }
 
+.welcome__form_absolute {
+	position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.welcome__window {
+	overflow: hidden;
+    border-radius: 0.3125rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 23.75rem;
+    -webkit-transition: 1s;
+    transition: 1s;
+    background: rgba(215, 191, 155, 0.3);
+    margin: auto;
+}
+
 .welcome__title {
 	text-align: center;
 	font-size:28px;
 	font-weight: 500;
 	color: #455a64;
-	margin-top: 15px;
+	margin-top: 9px;
 	margin-bottom: 0px;
 }
 
@@ -71,7 +94,7 @@
 .welcome-icons__item_center {
 	display: inline-block;
     text-align: center;
-	margin: 30px 12px;
+	margin: 25px 12px;
 }
 
 .list__item-line {
@@ -79,22 +102,35 @@
 }
 
 .welcome__navigation {
-	display: flex;
+	display: table-row;
 	background-color: #08ac99;
 }
 
 .item__navigation {
-	padding: 16px 31.5px;
+	padding: 11.5px 31.4px;
 	color: #fff;
 
+	@include laptops {
+		padding: 11.5px 31.4px;
+	}
+
+	@include tablets {
+		padding: 11.5px 34.65px;
+	}
+
 	@include phones {
-		padding: 16px 29.5px;
+		padding: 12px 29.3px;
 	}
 }
 
 .welcome__navigation-padding {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    display: table-cell;
+}
+
+.welcome__navigation_table {
+	display: table;
 }
 
 .item__navigation-line {
@@ -139,9 +175,15 @@
 }
 
 .welcome__button-wrapper {
+	transition: 1s;
 	@include phones {
 		margin: 0 auto;
 	}
+}
+
+.welcome__button-wrapper_none {
+	opacity: 0;
+	pointer-events: none;
 }
 
 .welcome__button:hover {
@@ -163,31 +205,3 @@
 	    padding-bottom: 4px;
 	}
 }
-
-        // .login__form
-        //     +heading("h1","login__form-title") Авторизуйтесь
-        //     form.login__form
-        //         ul.login__list-input
-        //             li.login-input__item
-        //                 input(type="text", placeholder="Логин", required, name="name", autocomplete="on").login__item-input
-        //             li.login-input__item
-        //                 input(type="password", placeholder="Пароль", required, name="Email", autocomplete="on").login__item-input
-        //             li.login-input__item
-        //                 input(type="checkbox", required, name="checkbox", id="checkbox").login__item-input
-        //                 label(for="checkbox")
-        //                     | Я человек
-        //             li.login-input__item
-        //                 p.login-input__text Вы точно не робот?
-        //                 input(type="radio", name="yes", id="yes").login__item-input
-        //                 label(for="yes")
-        //                     | Да
-        //                 input(type="radio", name="notSure", id="notSure").login__item-input
-        //                 label(for="notSure")
-        //                     | Не уверен
-        //         ul.login__navigation-list
-        //             li.login__navigation-item
-        //                 a(href="#")
-        //                     .login__comeback.login__comeback-line
-        //             li.login__navigation-item
-        //                 a(href="#")
-        //                     button(type="submit" value="Войти").login-button__enter.button__item-line-left

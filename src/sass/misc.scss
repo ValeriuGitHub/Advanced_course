@@ -15,6 +15,15 @@
 	top: 50%;
 }
 
+%before_after_line_nav {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    top: 50%;
+}
+
 %list {
     list-style: none;
     padding: 0;

@@ -1,6 +1,5 @@
 .footer {
 	background-color: #555b5e;
-	width: 100%;
 	padding: 17px 30px;
 
 	@include tablets {
@@ -109,11 +108,11 @@
     text-align: center;
     line-height: 32px;
     display: inline-block;
-}
 
-.icons__item-circle:hover {
-	background: #fff;
-	color: #53595d;
+	&:hover {
+		background: #fff;
+		color: #53595d;
+	}
 }
 
 .icons__item-footer {
@@ -128,16 +127,19 @@
     margin-top: 11px;
     margin-left: 32px;
 
+	&:first-child {
+		margin-left: 0px;
+	}
+
+
     @include phones {
     	margin-left: 10px;
     }
 }
 
-.link__item:first-child {
-	margin-left: 0px;
-}
-
 .link__list {
+	transition: 500ms;
+
 	@include tablets {
 		text-align: center;
 		font-weight: 500;

@@ -15,111 +15,33 @@
 }
 
 .skill {
-    bottom: 50px;
     color: #00bfa5;
     font-weight: 500;
     font-size: 14px;
     position: absolute;
-}
-
-.skill__HTML {
-	left: 39px;
-}
-
-.skill__CSS {
-	left: 42px;
-}
-
-.skill__JavaScript  {
-	top: 35%;
-    left: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
     text-align: center;
-}
 
-.skill__PHP  {
-	left: 45px;
-}
-
-.skill__mySQl  {
-	left: 40px;
-}
-
-.skill__Node  {
-	left: 25px;
-	top: 35%;
-	width: 70px;
-	text-align: center;
-}
-
-.skill__Mongo {
-	left: 30px;
-}
-
-.skill__Git {
-	left: 50px;
-}
-
-.skill__Gulp {
-	left: 45px;
-}
-
-.skill__Bower {
-	left: 40px;
-}
-
-.skill__circles {
-	fill: none;
-	stroke-width: 15;
+    @include phones {
+        left: 63%;
+    	top: 63%;
+    }
 }
 
 .circle__first {
 	stroke: #dfdcd5;
+	fill: none;
 }
 
 .circle__second {
 	stroke: #00bfa5;
 	stroke-dasharray: .0010 329.8575;
 	transition: all 1s;
-}
+	fill: transparent;
 
-.circle-15 {
-	stroke-dasharray: 42.39 329.8575;
-}
-
-.circle-35 {
-	stroke-dasharray: 115 329.8575;
-}
-
-.circle-40 {
-	stroke-dasharray: 131 329.8575;
-}
-
-.circle-45 {
-	stroke-dasharray: 148 329.8575;
-}
-
-.circle-55 {
-	stroke-dasharray: 181 329.8575;
-}
-
-.circle-60 {
-	stroke-dasharray: 197 329.8575;
-}
-
-.circle-70 {
-	stroke-dasharray: 230 329.8575;
-}
-
-.circle-80 {
-	stroke-dasharray: 263 329.8575;
-}
-
-.circle-85 {
-	stroke-dasharray: 280 329.8575;
-}
-
-.circle-90 {
-	stroke-dasharray: 296 329.8575;
 }
 
 .skills-section__item {
@@ -130,9 +52,15 @@
 	height: 120px;
 
 	@include phones {
-		margin-right: 11.7px;
-		margin-left: 30.15px;
-		margin-bottom: 35px;
+		margin-right: 30px;
+		margin-left: 30px;
+		margin-bottom: 80px;
+	}
+
+	&:last-child {
+		@include phones {
+			margin-bottom: 10px;
+		}
 	}
 }
 
@@ -140,19 +68,6 @@
 	@include phones {
 		margin-left: -24.15px;
 		margin-right: 0px;
-	}
-}
-
-.skills-section__item_margin-right-0 {
-	@include laptops {
-		margin-right: 0px;
-	}
-	@include tablets {
-		margin-right: 0px;
-	}
-
-	@include phones {
-		margin-right: 22.15px;
 	}
 }
 

@@ -1,105 +1,62 @@
-.about_relative
-    .about__triangle-left
-        svg(
-          viewbox="0 0 1000 100" 
-          preserveAspectRatio ="none"
-          class="triangle triangle_fill_white")
-          polygon(points="0,0 1000,200 0,1000") 
-    .about__triangle-right
-        svg(
-          viewbox="0 0 1000 100" 
-          preserveAspectRatio ="none"
-          class="triangle triangle_fill_beige")
-          polygon(points="0,200 1000,300 1000,0")
-    section.about#scroll
-        div.about-left
-            +heading('h1', 'about-left__title')
-                | Обо мне
-            div.user
-                img(src='./img/avatar.jpg').user__avatar
-                +heading('h2', 'user__title') Кто я
-                p.user__text Я веб разработчик из Новосибирска. Мне 27 лет.  Я занимаюсь разработкой современных сайтов  и приложений. Мне нравится делать интересные  и современные проекты. 
-                p.user__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        div.about-right
-            +heading('h2','about-right__title') Чем я могу быть вам полезен
-            p.about-right__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            ul.skills
-                li.skills__item
-                    .skill-section__title 
-                        h2| Frontend
-                    .skills-section__item-wrapper
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-90"/>
-                            </svg>
-                            span.skill.skill__HTML
-                                | HTML5
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-85"/>
-                            </svg>
-                            span.skill.skill__CSS
-                                | CSS3
-                        .skills-section__item.skills-section__item_margin-right-0
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-85"/>
-                            </svg>
-                            span.skill.skill__JavaScript 
-                                |  JavaScript &amp Jquery
-                li.skills__item
-                    .skill-section__title 
-                            h2| Backend
-                    .skills-section__item-wrapper
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-40"/>
-                            </svg>
-                            span.skill.skill__PHP
-                                | PHP
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-55"/>
-                            </svg>
-                            span.skill.skill__mySQl
-                                | mySQl
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-35"/>
-                            </svg>
-                            span.skill.skill__Node
-                                | Node.Js & npm 
-                        .skills-section__item.skills-section__item_margin-right-0
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-60"/>
-                            </svg>
-                            span.skill.skill__Mongo
-                                | Mongo.db
-                li.skills__item
-                    .skill-section__title 
-                            h2  WorkFlow
-                    .skills-section__item-wrapper
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-80"/>
-                            </svg>
-                                span.skill.skill__Git Git
-                        .skills-section__item
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-70"/>
-                            </svg>
-                                span.skill.skill__Gulp Gulp
-                        .skills-section__item.skills-section__item_margin-right-0
-                            <svg class="skill__circles" viewbox='0 0 120 120'>
-                                <circle r="52.5" cx="50%" cy="50%" fill="none" class="circle__first"/>
-                                <circle r="52.5" cx="50%" cy="50%" transform="rotate(-90 60 60)" class="circle__second circle-60"/>
-                            </svg>
-                                span.skill.skill__Bower Bower
+section.about#scroll
+    div.about-left
+        +heading('h1', 'about-left__title')
+            | Обо мне
+        div.user
+            img(src='./img/avatar.jpg').user__avatar
+            +heading('h2', 'user__title') Кто я
+            p.user__text Я веб разработчик из Новосибирска. Мне 27 лет.  Я занимаюсь разработкой современных сайтов  и приложений. Мне нравится делать интересные  и современные проекты. 
+            p.user__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    div.about-right
+        +heading('h2','about-right__title') Чем я могу быть вам полезен
+        p.about-right__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        ul.skills
+            li.skills__item
+                .skill-section__title 
+                    h2| Frontend
+                .skills-section__item-wrapper
+                    .skills-section__item
+                        .circles__value 90
+                        span.skill
+                            | HTML5
+                    .skills-section__item
+                        .circles__value 85
+                        span.skill
+                            | CSS3
+                    .skills-section__item
+                        .circles__value 85
+                        span.skill 
+                            |  JavaScript &amp Jquery
+            li.skills__item
+                .skill-section__title 
+                        h2| Backend
+                .skills-section__item-wrapper
+                    .skills-section__item
+                        .circles__value 40
+                        span.skill
+                            | PHP
+                    .skills-section__item
+                        .circles__value 55
+                        span.skill
+                            | mySQl
+                    .skills-section__item
+                        .circles__value 35
+                        span.skill
+                            | Node.Js & npm 
+                    .skills-section__item
+                        .circles__value 60
+                        span.skill
+                            | Mongo.db
+            li.skills__item
+                .skill-section__title 
+                        h2  WorkFlow
+                .skills-section__item-wrapper
+                    .skills-section__item
+                        .circles__value 80
+                        span.skill Git
+                    .skills-section__item
+                        .circles__value 70
+                        span.skill Gulp
+                    .skills-section__item
+                        .circles__value 60
+                        span.skill Bower

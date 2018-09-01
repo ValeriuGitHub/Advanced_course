@@ -1,32 +1,63 @@
-.works_relative
-    .works__triangle-left
-        svg(
-            viewbox="0 0 1000 100" 
-            preserveAspectRatio ="none"
-            class="triangle triangle_fill_grey")
-            polygon(points="0,0 1000,200 0,1000")
-    .works__triangle-right
-        svg(
-              viewbox="0 0 1000 100" 
-              preserveAspectRatio ="none"
-              class="triangle triangle_fill_grey")
-              polygon(points="0,200 1000,300 1000,0") 
 section.works#scroll
     +heading('h1','works__title') Мои работы
-    .works_flex.works_flex2
-        .works-left
-            +heading('h1','left__title') Сайт школы онлайн Образования
-            .left__subtitle HTML, CSS, JAVASCRIPT
-            a(href="#")
-                .left__link
-                    i.fa.fa-link(aria-hidden="true") 
-                    span.link__padding Посмотреть сайт
-        .portfolio__img
-                img(src="./img/works_portfolio.png").portfolio__img_margin
-        .works__under-portfolio
-            .works_under-portfolio-left
-                a(href="#").works-under__portfolio-item
-                    i.fa.fa-chevron-down(aria-hidden="true")
-            .works_under-portfolio-right
-                a(href="#").works-under__portfolio-item
-                    i.fa.fa-chevron-up(aria-hidden="true")
+    .slider
+        ul.slider__list
+            li.slider__item.slider__item_active
+                .portfolio__img-wrapper
+                    img(src="/img/work1.png").portfolio__img
+                .works_flex.works_flex2
+                    .works-left
+                        +heading('h1','left__title') Сайт школы онлайн Образования
+                        .left__subtitle HTML, CSS, JAVASCRIPT
+                        a(href="https://loftschool.com/")
+                            .left__link
+                                i.fa.fa-link(aria-hidden="true") 
+                                span.link__padding Посмотреть сайт
+            li.slider__item
+                .portfolio__img-wrapper
+                    img(src="/img/work2.png").portfolio__img
+                .works_flex.works_flex2
+                    .works-left
+                        +heading('h1','left__title-in-one-line') Itloft
+                        .left__subtitle HTML, CSS, JAVASCRIPT
+                        a(href="https://itloft.ru/")
+                            .left__link
+                                i.fa.fa-link(aria-hidden="true") 
+                                span.link__padding Посмотреть сайт
+            li.slider__item
+                .portfolio__img-wrapper
+                    img(src="/img/work3.png").portfolio__img
+                .works_flex.works_flex2
+                    .works-left
+                        +heading('h1','left__title-in-one-line') Loftblog
+                        .left__subtitle HTML, CSS, JAVASCRIPT
+                        a(href="https://loftblog.ru/")
+                            .left__link
+                                i.fa.fa-link(aria-hidden="true") 
+                                span.link__padding Посмотреть сайт
+            li.slider__item
+                .portfolio__img-wrapper
+                    img(src="/img/work4.png").portfolio__img
+                .works_flex.works_flex2
+                    .works-left
+                        +heading('h1','left__title-in-one-line') Атма Йога
+                        .left__subtitle HTML, CSS, JAVASCRIPT
+                        a(href="https://atmayoga.ru/")
+                            .left__link
+                                i.fa.fa-link(aria-hidden="true") 
+                                span.link__padding Посмотреть сайт
+            .works__under-portfolio
+                .works_under-portfolio-left.slider__prev
+                    .slider__bg
+                        img(src="/img/work4.png").slider__bg-img
+                    .slider__bg
+                        img.slider__bg-img
+                    a(href="#").works-under__portfolio-item.slider__controls-down
+                        i.fa.fa-chevron-down(aria-hidden="true")
+                .works_under-portfolio-right.slider__next
+                    .slider__bg
+                        img(src="/img/work2.png").slider__bg-img
+                    .slider__bg
+                        img.slider__bg-img
+                    a(href="#").works-under__portfolio-item.works-under__portfolio-item_right.slider__controls-top
+                        i.fa.fa-chevron-up(aria-hidden="true")

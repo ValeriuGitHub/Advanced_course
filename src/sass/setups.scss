@@ -15,7 +15,13 @@ html {
 }
 
 .wrapper {
-    min-height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.page-content {
+    flex: 1;
 }
 
 body {

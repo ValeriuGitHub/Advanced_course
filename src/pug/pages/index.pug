@@ -5,59 +5,63 @@ block content
     section.welcome
         .welcome__button-wrapper
             a(href="#").welcome__button Авторизоваться
-        div.welcome__form
-            div.welcome__avatar-circle
-                img(src='./img/avatar.jpg').welcome__avatar
-            h1.welcome__title Владимир Астахов
-            div.welcome__subtitle Личний сайт веб-разработчика
-            ul.welcome-icons.welcome-icons_green
-                li.welcome-icons__item_center.welcome-icons__item_vk
-                    a(href="#")
-                        i.fa.fa-vk(aria-hidden="true")
-                li.welcome-icons__item_center.welcome-icons__item_github
-                    a(href="#")
-                        i.fa.fa-github-alt(aria-hidden="true")
-                li.welcome-icons__item_center.welcome-icons__item_linkedin
-                    a(href="#")
-                        i.fa.fa-linkedin(aria-hidden="true")
-            ul.welcome__navigation
-                li.welcome__navigation-padding
-                    a(href="#").item__navigation.item__navigation-line  Мои работи
-                li.welcome__navigation-padding
-                    a(href="#").item__navigation.item__navigation-line Обо мне
-                li.welcome__navigation-padding
-                    a(href="#").item__navigation Блог    
-        .login__form
-            +heading("h1","login__form-title") Авторизуйтесь
-            form.login__form
-                ul.login__list-input
-                    li.login-input__item
-                        .login__item-square
-                            i.fa.fa-user(aria-hidden="true")
-                        input(type="text", placeholder="Логин", required, name="name", autocomplete="on").login__item-input
-                    li.login-input__item
-                        .login__item-square
-                            i.fa.fa-key(aria-hidden="true")
-                        input(type="password", placeholder="Пароль", required, name="Email", autocomplete="on").login__item-input
-                    li.login-input__item
-                        input(type="checkbox", required, name="checkbox", id="checkbox").login__item-input
-                        label(for="checkbox")
-                            | Я человек
-                    li.login-input__item
-                        p.login-input__text Вы точно не робот?
-                        input(type="radio", name="yes", id="yes").login__item-input
-                        label(for="yes")
-                            | Да
-                        input(type="radio", name="notSure", id="notSure").login__item-input
-                        label(for="notSure")
-                            | Не уверен
-                ul.login__navigation-list
-                    li.login__navigation-item
-                        a(href="#")
-                            .login__comeback.login__comeback-line
-                    li.login__navigation-item
-                        a(href="#")
-                            button(type="submit" value="Войти").login-button__enter.button__item-line-left
+        main
+            div.window__form.welcome__form_absolute
+                div.welcome__avatar-circle
+                    img(src='./img/avatar.jpg').welcome__avatar
+                h1.welcome__title Владимир Астахов
+                div.welcome__subtitle Личний сайт веб-разработчика
+                ul.welcome-icons.welcome-icons_green
+                    li.welcome-icons__item_center.welcome-icons__item_vk
+                        a(href="https://vk.com/")
+                            i.fa.fa-vk(aria-hidden="true")
+                    li.welcome-icons__item_center.welcome-icons__item_github
+                        a(href="https://github.com/")
+                            i.fa.fa-github-alt(aria-hidden="true")
+                    li.welcome-icons__item_center.welcome-icons__item_linkedin
+                        a(href="https://linkedin.com/")
+                            i.fa.fa-linkedin(aria-hidden="true")
+                .welcome__navigation_table
+                    ul.welcome__navigation
+                        li.welcome__navigation-padding
+                            a(href="works.html").item__navigation.item__navigation-line  Мои работи
+                        li.welcome__navigation-padding
+                            a(href="about.html").item__navigation.item__navigation-line Обо мне
+                        li.welcome__navigation-padding
+                            a(href="blog.html").item__navigation Блог    
+            .window__form.window-rotate
+                +heading("h1","login__form-title") Авторизуйтесь
+                form(action="").index__form
+                    ul.login__list-input
+                        li.login-input__item.login-input__item_flex
+                            input(type="text", placeholder="Логин", name="IndexName", autocomplete="on").login__item-input.login__input-name.name
+                            .login__item-square
+                                i.fa.fa-user(aria-hidden="true").login-input__item_valid
+                        li.login-input__item.login-input__item_flex
+                            input(type="password", placeholder="Пароль", name="IndexPassword", autocomplete="on").login__item-input.login__input-password.password
+                            .login__item-square
+                                i.fa.fa-key(aria-hidden="true").login-input__item_valid
+                        li.login-checkbox__item
+                            label.login__checkbox-input Я человек
+                                input(type="checkbox" ).login__checkbox_input#login__checkbox_input
+                                span.login-checkbox__checkmark
+                        li.login-radio__item
+                            p.login-input__text Вы точно не робот?
+                            label.login__radio-input.login__radio-input_margin-right#label.login-radio__yes Да
+                              input(type="radio" name="radio" id="radio1")
+                              span.login-radio__checkmark
+                            label(for="#label").login__radio-input_color
+                            label.login__radio-input#label.login-radio__no Не уверен
+                              input(type="radio" checked="checked" name="radio" id="radio2").login-radio__no.field
+                              span.login-radio__checkmark
+                            label(for="#label").login__radio-input_color                            
+                    ul.login__navigation-list
+                        li
+                            a(href="#")
+                                .login__navigation-item.login__comeback.login__comeback-line На главную
+                        li
+                            a(href="#")
+                                button(type="submit").login__navigation-item.login-button__enter.button__item-line-left.login__navigation-item.index__validate Войти
         p.welcome__text-bottom 
             span.welcome__text-bottom_line-after_display-block © Владимир Астахов 
             | создано с любовью в LoftSchool | 2016

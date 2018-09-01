@@ -83,8 +83,11 @@
 }
 
 // For placeholder
-input::-moz-placeholder { color: rgba(55, 62, 66, 0.502) }
+input::-moz-placeholder { color: rgba(55, 62, 66, 0.502);}
 input::-webkit-input-placeholder { color: rgba(55, 62, 66, 0.502); }
+input  {font-family: "Roboto";}
+input::-moz-placeholder {font-family: "Roboto";}
+input::-webkit-input-placeholder {font-family: "Roboto";}
 textarea {color: rgba(55, 62, 66, 0.502) }
 textarea::-moz-placeholder { color: rgba(55, 62, 66, 0.502) }
 textarea::-webkit-input-placeholder { color: rgba(55, 62, 66, 0.502); }
@@ -95,3 +98,5 @@ textarea::-webkit-input-placeholder {font-family: "Roboto";}
 // For input
 input {outline:none;}
 textarea{outline: none;}
+input {border:none;}
+textarea{border: none;}

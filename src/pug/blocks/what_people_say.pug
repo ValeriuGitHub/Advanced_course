@@ -21,21 +21,21 @@ section.what-people-say
                 .review-right__description преподаватель
     .what-people-say__form
         +heading('h1',"form__title") Связаться со мной
-        form
+        form(action="")
             ul.list__form
                 li.form__item
-                    input(type="text", placeholder="Имя", required, name="name", autocomplete="on").form__item-input
+                    input(type="text", placeholder="Имя", name="name", autocomplete="on").name.form__item-input
                 li.form__item
-                    input(type="email", placeholder="Email", required, name="Email", autocomplete="on").form__item-input
+                    input(type="email", placeholder="Email", name="Email", autocomplete="on").email.form__item-input
                 li.form__item
-                    textarea(placeholder="Ваше сообщение").form__item-textarea
+                    textarea(placeholder="Ваше сообщение" id="textarea").form__item-textarea
             ul.list__button
                 li
                     a(href="#")
-                        button(type="submit" value="Отправить").button__item.button__item-line.button__item-send
+                        button(type="submit").button__item.button__item-line.button__item-send Отправить
                 li
                     a(href="#")
-                        button(type="reset" value="Очистить").button__item.button__item-reset.button__item-line-left
+                        button(type="reset").button__item.button__item-reset.button__item-line-left Очистить
     .link-up
         a(href="#header")
             i.fa.fa-chevron-up(aria-hidden="true")

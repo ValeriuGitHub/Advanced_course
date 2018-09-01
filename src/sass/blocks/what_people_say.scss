@@ -1,15 +1,45 @@
 .what-people-say {
 	background: url(./img/what_people-say.jpg) center center / cover no-repeat;
+	background-attachment: fixed;
 }
 
 .what-people-say__title {
     @extend %big_title;
     background: url(./img/about_header.png) center center /  no-repeat, url(./img/about.png) center center /  no-repeat;
     text-align: center;
-    padding: 60px 120px 43px;
+    padding: 60px 120px 46px;
     width: 516px;
     margin: 0 auto;
     line-height: 1.1;
+
+	& span {
+		position: relative;
+	}
+
+	& span:after, & span:before {
+		@extend %before_after_line;
+		top: 25%;
+
+		@include tablets {
+			top: 50%;
+		}
+	}
+
+	& span:after {
+		left: -40px;
+	}
+
+	& span:before {
+		right: -85px;
+
+		@include tablets {
+			right: -40px;
+		}
+
+		@include phones {
+			right: -60px;
+		}
+	}
 
     @include laptops {
     	width: 540px;
@@ -25,36 +55,8 @@
     	padding: 30px 120px 25px;
     	background-size: 90%;
     	font-size: 35px;
+    	margin-top: 0px;
     }
-}
-
-.what-people-say__title span {
-	position: relative;
-}
-
-.what-people-say__title span:after, .what-people-say__title span:before {
-	@extend %before_after_line;
-	top: 25%;
-
-	@include tablets {
-		top: 50%;
-	}
-}
-
-.what-people-say__title span:after {
-	left: -40px;
-}
-
-.what-people-say__title span:before {
-	right: -85px;
-
-	@include tablets {
-		right: -40px;
-	}
-
-	@include phones {
-		right: -60px;
-	}
 }
 
 .review {
@@ -90,7 +92,7 @@
 
 .review-left__text {
 	max-width: 365px;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
 
     @include phones {
     	max-width: 100%;
@@ -116,6 +118,11 @@
     border-radius: 50%;
     overflow: hidden;
     float: left;
+
+    @include phones {
+    	width: 90px;
+    	height: 90px;
+    }
 }
 
 .review-right__quote, .review-left__quote {
@@ -153,8 +160,6 @@
 
 .review_float {
 	float: left;
-
-
 }
 
 .what-people-say__form {
@@ -162,6 +167,7 @@
 	border-radius: 5px;
 	margin: 68px auto;
 	margin-bottom: 55px;
+	margin-top: 64px;
 	padding-top: 30px;
 	background: url(./img/works_blur.jpg) center center / cover no-repeat;
 
@@ -176,22 +182,41 @@
 
 .form__item {
 	margin: 20px;
+
+	&:first-child {
+		margin-top: 25px;
+	}
+
+	&:last-child {
+		margin-bottom: 15px;
+	}
 }
 
 .form__item-input {
     border-radius: 5px;
 	width: 100%;
-	padding: 16.5px 20px 16.5px 20px;
+	padding: 14.2px 20px 14.2px 20px;
 	color: rgba(55, 62, 66, 0.502);
 	border: none;
+	font-size: 16px;
+	border: 1px solid transparent;
+
+	&:focus {
+		border-color: #00bfa5;
+	}
 }
 
 .form__item-textarea {
 	min-width: 340px;
 	min-height: 140px;
 	border-radius: 5px;
-	border: none;
+	border: 1px solid transparent;
 	padding: 15.5px 20px 15.5px 20px;
+	font-size: 16px;
+
+	&:focus {
+		border-color: #00bfa5;
+	}
 }
 
 .link-up a {
@@ -201,7 +226,7 @@
 .link-up {
 	text-align: center;
 	padding-bottom: 70px;
-	font-size: 31px;
+	font-size: 28px;
 
 	@include laptops {
 		font-size: 26px;
@@ -223,6 +248,23 @@
 .form__title {
 	@extend %title_center;
 
+	& span {
+		position: relative;
+	}
+
+	& span:after, & span:before {
+		@extend %before_after_line;
+		top: 50%;
+	}
+
+	& span:after {
+		left: -40px;
+	}
+
+	& span:before {
+		right: -40px;
+	}
+
 	@include phones {
 		font-size: 25.4px;
 	}
@@ -232,33 +274,16 @@
 	}
 }
 
-.form__title span {
-	position: relative;
-}
-
-.form__title span:after, .form__title span:before {
-	@extend %before_after_line;
-	top: 50%;
-}
-
-.form__title span:after {
-	left: -40px;
-}
-
-.form__title span:before {
-	right: -40px;
-}
-
 .list__button {
 	display: flex;
-	background-color: #08ac99;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .button__item {
-    padding: 14px 57.6px;
+    padding: 13.5px 57.6px;
+    padding-top: 14.3px;
     color: #fff;
     font-weight: 500;
     border: none;
@@ -269,19 +294,21 @@
 .button__item-reset {
 	border-bottom-right-radius: 5px;
 	background-color: #26bbaa;
+    transition: 500ms;
+
+	&:hover {
+		background-color: #15613b;
+	}
 }
 
 .button__item-send {
 	border-bottom-left-radius: 5px;
 	background-color: #268c8b;
-}
+    transition: 500ms;
 
-.button__item-send:hover {
-	background-color: #7aa9d1;
-}
-
-.button__item-reset:hover {
-	background-color: #63b0f2;
+	&:hover {
+		background-color: #1a9155;
+	}
 }
 
 .button__item-line {

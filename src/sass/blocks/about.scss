@@ -37,11 +37,26 @@
     @extend %big_title;
     background: url(./img/about_header.png) center center / cover no-repeat;
     float: left;
-    padding: 45px 130px 20px 130px;
-    padding-left: 100px;
-    margin-left: 54px;
+    padding: 45px 130px 20px 120px;
+    margin-left: 34px;
     margin-top: -50px;
     position: relative;
+
+	    & span {
+			position: relative;
+		}
+
+		& span:after, & span:before {
+			@extend %before_after_line;
+		}
+
+		& span:after {
+			left: -40px;
+		}
+
+		& span:before {
+			right: -40px;
+		}
 
     @include laptops {
 	    text-align: center;
@@ -52,6 +67,7 @@
     @include tablets {
     	background-size: 40%;
         margin-left: 0;
+        margin-top: 0px;
         padding-left: 130px;
     }
 
@@ -59,24 +75,10 @@
     	padding: 30px 40px;
     	background-size: 80%;
     	font-size: 43px;
+    	margin-top: 0px;
     }
 }
 
-.about-left__title span {
-	position: relative;
-}
-
-.about-left__title span:after, .about-left__title span:before {
-	@extend %before_after_line;
-}
-
-.about-left__title span:after {
-	left: -40px;
-}
-
-.about-left__title span:before {
-	right: -40px;
-}
 
 .user {
     float: right;
@@ -117,7 +119,31 @@
 
 .user__title {
 	@extend %title_center;
-	margin-top: 27px;
+	margin-top: 21px;
+
+		& span {
+			position: relative;
+		}
+
+		& span:after, & span:before {
+			@extend %before_after_line;
+		}
+
+		& span:after {
+			left: -55px;
+
+			@include phones {
+				left: -40px;
+			}
+		}
+
+		& span:before {
+			right: -55px;
+
+			@include phones {
+				right: -40px;
+			}
+		}
 
 	@include phones {
 		font-size: 29px;
@@ -128,34 +154,10 @@
 	}
 }
 
-.user__title span {
-	position: relative;
-}
-
-.user__title span:after, .user__title span:before {
-	@extend %before_after_line;
-}
-
-.user__title span:after {
-	left: -55px;
-
-	@include phones {
-		left: -40px;
-	}
-}
-
-.user__title span:before {
-	right: -55px;
-
-	@include phones {
-		right: -40px;
-	}
-}
-
 .user__text {
     width: 382px;
     line-height: 1.55;
-    margin-top: 18px;
+    margin-top: 18.5px;
     margin-bottom: 0px;
 
     @include laptops {
