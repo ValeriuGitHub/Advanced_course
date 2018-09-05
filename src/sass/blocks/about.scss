@@ -1,255 +1,230 @@
 .about {
-	display: flex;
-	@extend %clearfix;
-
-	@include tablets {
-		display: block;
-	}
-}
-
-.about_relative {
-	position: relative;
-}
-
-.about__triangle-left, .about__triangle-right {
-	@include tablets {
-		fill: #efeee9;
-	}
-}
-
-.about-left {
-	width: 50%;
-	background-color: #efeee9;
-	padding-bottom: 145px;
-	padding-right: 10px;
-
-	@include laptops {
-		padding-bottom: 40px;
-	}
-
-	@include tablets {
-		width: 100%;
-		padding-right: 0px;
-	}
-}
-
-.about-left__title {
-    @extend %big_title;
-    background: url(./img/about_header.png) center center / cover no-repeat;
-    float: left;
-    padding: 45px 130px 20px 120px;
-    margin-left: 34px;
-    margin-top: -50px;
-    position: relative;
-
-	    & span {
-			position: relative;
-		}
-
-		& span:after, & span:before {
-			@extend %before_after_line;
-		}
-
-		& span:after {
-			left: -40px;
-		}
-
-		& span:before {
-			right: -40px;
-		}
-
-    @include laptops {
-	    text-align: center;
-	    background-size: 90%;
-	    float: none;
-    }
+    display: flex;
+    @extend %clearfix;
 
     @include tablets {
-    	background-size: 40%;
-        margin-left: 0;
-        margin-top: 0px;
-        padding-left: 130px;
+        display: block;
     }
+	&-left {
+	    width: 50%;
+	    background-color: #efeee9;
+	    padding-bottom: 145px;
+	    padding-right: 10px;
 
-    @include phones {
-    	padding: 30px 40px;
-    	background-size: 80%;
-    	font-size: 43px;
-    	margin-top: 0px;
-    }
+	    @include laptops {
+	        padding-bottom: 40px;
+	    }
+
+	    @include tablets {
+	        width: 100%;
+	        padding-right: 0px;
+	    }
+	    &__title {
+	        background: url(./img/about_header.png) center center / cover no-repeat;
+	        float: left;
+	        padding: 45px 130px 20px 120px;
+	        margin-left: 34px;
+	        margin-top: -50px;
+	        position: relative;
+
+	        & span {
+	            position: relative;
+	        }
+
+	        & span:after {
+	            left: -40px;
+	        }
+
+	        & span:before {
+	            right: -40px;
+	        }
+
+	        @include laptops {
+	            text-align: center;
+	            background-size: 90%;
+	            float: none;
+	        }
+
+	        @include tablets {
+	            background-size: 40%;
+	            margin-left: 0;
+	            margin-top: 0px;
+	            padding-left: 130px;
+	        }
+
+	        @include phones {
+	            padding: 30px 40px;
+	            background-size: 80%;
+	            font-size: 43px;
+	            margin-top: 0px;
+	        }
+	    }
+	}
 }
-
 
 .user {
     float: right;
     margin-top: 20px;
 
-    @include laptops {
-	    float: none;
-	    width: 500px;
-	    margin: 0 auto;
-    	margin-top: 20px;
+    &,
+    & h1 h2 {
+        color: #455a64;
     }
 
-	@include tablets { 
+    @include laptops {
+        float: none;
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    @include tablets {
         width: 523px;
-    	margin: 0 auto;
-    }
-    
-    @include phones {
-    	width: 100%;
-    }
-}
-
-.user__avatar {
-	@include laptops {
-		display: block;
-		margin: 0 auto;
+        margin: 0 auto;
     }
 
     @include phones {
-    	width: 393.84px;
-		margin: 0 auto;
+        width: 100%;
     }
-}
+    &__avatar {
+        @include laptops {
+            display: block;
+            margin: 0 auto;
+        }
 
-.user, .user h1 h2 {
-	color: #455a64;
-}
-
-.user__title {
-	@extend %title_center;
-	margin-top: 21px;
-
-		& span {
-			position: relative;
-		}
-
-		& span:after, & span:before {
-			@extend %before_after_line;
-		}
-
-		& span:after {
-			left: -55px;
-
-			@include phones {
-				left: -40px;
-			}
-		}
-
-		& span:before {
-			right: -55px;
-
-			@include phones {
-				right: -40px;
-			}
-		}
-
-	@include phones {
-		font-size: 29px;
-	}
-
-	@include tablets {
-		margin-top: 40px;
-	}
-}
-
-.user__text {
-    width: 382px;
-    line-height: 1.55;
-    margin-top: 18.5px;
-    margin-bottom: 0px;
-
-    @include laptops {
-    	margin-left: 16px;
+        @include phones {
+            width: 393.84px;
+            margin: 0 auto;
+        }
     }
+    &__title {
+        text-align: center;
+        margin-top: 21px;
+        color: #455a64;
+        font-weight: 500;
 
-	@include tablets { 
-       	width: 440px;
-    	margin: 0 auto;
-    	margin-left: 28px;
-    	margin-top: 18px;
+        & span {
+            position: relative;
+        }
+
+        & span:after {
+            left: -55px;
+
+            @include phones {
+                left: -40px;
+            }
+        }
+
+        & span:before {
+            right: -55px;
+
+            @include phones {
+                right: -40px;
+            }
+        }
+
+        @include phones {
+            font-size: 29px;
+        }
+
+        @include tablets {
+            margin-top: 40px;
+        }
     }
+    &__text {
+        width: 382px;
+        line-height: 1.55;
+        margin-top: 18.5px;
+        margin-bottom: 0px;
 
-    @include phones {
-    	margin: 0 auto;
-    	margin-top: 18px;
-    	width: 369px;
+        @include laptops {
+            margin-left: 16px;
+        }
+
+        @include tablets {
+            width: 440px;
+            margin: 0 auto;
+            margin-left: 28px;
+            margin-top: 18px;
+        }
+
+        @include phones {
+            margin: 0 auto;
+            margin-top: 18px;
+            width: 369px;
+        }
     }
-}
-
-.about-right__title {
-	margin-top: 10px;
-	line-height: 1.2;
-
-	@include phones {
-		font-size: 25.8px;
-	}
 }
 
 .about-right {
-	width: 50%;
-	background-color: #eeebdf;
-	color: #455a64;
-	padding-left: 40px;
+    width: 50%;
+    background-color: #eeebdf;
+    color: #455a64;
+    padding-left: 40px;
 
-	@include laptops {
-		padding-left: 32px;
-	}
-
-	@include tablets {
-		width: 100%;
-		padding: 40px 0px 40px 0px;
-	}
-}
-
-.about-right__title span {
-	display: block;
-	color: #455a64;
-	width: 220px;
-	margin: 0 auto;
-	font-weight: 400;
-	@extend %title_center;
-}
-
-.about-right__title span {
-	position: relative;
-}
-
-.about-right__title span:after, .about-right__title span:before {
-	@extend %before_after_line;
-	top: 20px;
-
-	@include tablets {
-		top: 32px;
-	}
-
-	@include phones {
-		top: 50%;
-	}
-}
-
-.about-right__title span:after {
-	left: -40px;
-
-}
-
-.about-right__title span:before {
-	right: -40px;
-}
-
-.about-right__text {
-	margin-right: 55px;
-    line-height: 1.4;
-    margin-top: 29px;
-    margin-bottom: 46px;
-
-    @include tablets {
-	    margin: 29px auto 49px auto;
-	    width: 534px;    	
+    @include laptops {
+        padding-left: 32px;
     }
 
-    @include phones {
-    	width: 342px;
+    @include tablets {
+        width: 100%;
+        padding: 40px 0px 40px 0px;
+    }
+    &__text {
+        margin-right: 55px;
+        line-height: 1.4;
+        margin-top: 29px;
+        margin-bottom: 46px;
+
+        @include tablets {
+            margin: 29px auto 49px auto;
+            width: 534px;
+        }
+
+        @include phones {
+            width: 342px;
+        }
+    }
+    &__title {
+        margin-top: 10px;
+        line-height: 1.2;
+
+        @include phones {
+            font-size: 25.8px;
+        }
+
+        & span {
+            display: block;
+            color: #455a64;
+            width: 220px;
+            margin: 0 auto;
+            font-weight: 400;
+            @extend %title_center;
+        }
+
+        & span {
+            position: relative;
+        }
+
+        & span:after,
+        & span:before {
+            top: 20px;
+
+            @include tablets {
+                top: 32px;
+            }
+
+            @include phones {
+                top: 50%;
+            }
+        }
+
+        & span:after {
+            left: -40px;
+        }
+
+        & span:before {
+            right: -40px;
+        }
     }
 }

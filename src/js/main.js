@@ -108,15 +108,15 @@ IndexRotate();
 
 var mobileBlogMenu = function() {
 
-  var swipe = $(".blog__swipe");
-      nav = $(".blog-nav");
-      wrapper = $(".blog__swipe-wrapper");
+  var swipe = $(".blog-column__swipe");
+      nav = $(".blog-column__nav");
+      wrapper = $(".blog-column__swipe-wrapper");
 
-    $(".blog__swipe-wrapper").on('click', function(e) {
+    $(".blog-column__swipe-wrapper").on('click', function(e) {
       e.preventDefault();
-      swipe.toggleClass("blog__swipe_active");
-      nav.toggleClass("blog-nav_active");
-      wrapper.toggleClass("blog__swipe-wrapper_active");
+      swipe.toggleClass("blog-column__swipe_active");
+      nav.toggleClass("blog-column__nav_active");
+      wrapper.toggleClass("blog-column__swipe-wrapper_active");
     });
 }
 

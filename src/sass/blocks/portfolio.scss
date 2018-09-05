@@ -61,14 +61,9 @@
     align-content: center;
     height: 100vh;
 
-    @include laptops {
-    	padding: 250px 80px;
-    }
-
     @include tablets {
     	height: 40vh;
     	width: 100%;
-    	padding: 60px 0px;
     }
 
     @include phones {

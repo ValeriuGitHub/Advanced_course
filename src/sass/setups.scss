@@ -24,6 +24,28 @@ html {
     flex: 1;
 }
 
+.title {
+    font-family: 'Bernier';
+    font-size: 35px;
+    color: #373e42;
+}
+
+.title_big {
+    @extend %big_title;
+}
+
+.before-after-line {
+    & span:after,
+    & span:before { 
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 5px;
+        background-color: rgba(55, 62, 66, 0.2);
+        top: 50%;
+    }
+}
+
 body {
     font-family: "Roboto";
     font-size: 16px;

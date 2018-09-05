@@ -220,7 +220,8 @@
 }
 
 .link-up a {
-	color: #b3ced1;
+	color: #fff;
+	opacity: 0.7;
 }
 
 .link-up {
@@ -242,7 +243,7 @@
 }
 
 .link-up a:hover {
-	color: #fff;
+	opacity: 1;
 }
 
 .form__title {
@@ -318,4 +319,3 @@
 .button__item_line-left {
 	border-left: 1px solid #55919e;
 }
-

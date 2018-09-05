@@ -8,8 +8,6 @@
 	background: #26bbaa;
 	visibility: visible;
 	opacity: 1;
-	
-
 	&__spinner {
 		width: 150px;
 		height: 150px;
@@ -18,7 +16,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%)
 	}
-
 	&__percents {
 		position: absolute;
 		top: 50%;
@@ -26,13 +23,11 @@
 		transform: translate(-50%, -50%);
 		color: #fff;
 	}
-
 	&__animation {
 		width: 150px;
 		height: 150px;
 		position: relative;
 		animation: spin 1.5s linear infinite;
-
 	&,
 	&:before,
 	&:after { 

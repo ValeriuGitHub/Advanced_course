@@ -1,10 +1,10 @@
-#map {
-	height: 100vh;
-}
+.map_relative {
+    position: relative;
+    height: 100vh;
 
-.map_relative	{
-	position: relative;
-	height: 100vh;
+    #map {
+        height: 100vh;
+    }
 }
 
 .contacts {
@@ -19,60 +19,56 @@
     transform: translate(-50%, -50%);
 
     @include phones {
-    	top: 0;
-    	left: 50%;
-    	transform: translate(-50%, 0%);
-    	width: 393.856px;
-    	border-radius: 0px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 393.856px;
+        border-radius: 0px;
         background-color: #fff;
     }
-}
+    &__title {
+        text-align: center;
+        padding-bottom: 26px;
 
-.contacts__title {
-	@extend %title_center;
-	color: #373e42;
-	padding-bottom: 26px;
+        @include phones {
+            padding-bottom: 15px;
+        }
 
-	@include phones {
-		padding-bottom: 15px;
-	}
+        & span {
+            position: relative;
+        }
 
-	& span {
-		position: relative;
-	}
+        & span:after,
+        & span:before {
+            top: 50%;
+        }
 
-	& span:after, & span:before {
-		@extend %before_after_line;
-		top: 50%;
-	}
+        & span:after {
+            left: -40px;
+        }
 
-	& span:after {
-		left: -40px;
-	}
+        & span:before {
+            right: -40px;
+        }
+    }
+    &__item {
+        font-weight: 500;
+        color: #455a64;
+        padding-bottom: 15px;
+        opacity: 0.8;
 
-	& span:before {
-		right: -40px;
-	}
-}
+        & span {
+            display: inline-block;
+            vertical-align: text-bottom;
+        }
 
-.contacts__item {
-	font-weight: 500;
-	color: #455a64;
-	padding-bottom: 15px;
-	opacity: 0.8;
-
-	& span {
-		display: inline-block;
-		vertical-align: text-bottom;
-	}
-
-	&:last-child {
-		padding-bottom: 0px;
-	}
-}
-
-.contacts__item-icons {
-	color: #00bea4;
-	margin-right: 10px;
-	font-size: 27px;
+        &:last-child {
+            padding-bottom: 0px;
+        }
+        &-icons {
+            color: #00bea4;
+            margin-right: 10px;
+            font-size: 27px;
+        }
+    }
 }

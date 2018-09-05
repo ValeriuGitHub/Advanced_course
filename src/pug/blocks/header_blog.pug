@@ -2,25 +2,25 @@ nav.header-nav
     ul.header-nav__list
         li.header-nav__item
             a(href="works.html") 
-                +heading("h1","header-nav__title") Мои работы
+                +heading("h1","header-nav__title", 'title_big') Мои работы
         li.header-nav__item
             a(href="blog.html") 
-                +heading("h1","header-nav__title") Блог
+                +heading("h1","header-nav__title", 'title_big') Блог
         li.header-nav__item
             a(href="about.html") 
-                +heading("h1","header-nav__title") Обо мне
+                +heading("h1","header-nav__title", 'title_big') Обо мне
         li.header-nav__item
             a(href="index.html") 
-                +heading("h1","header-nav__title") Авторизация
+                +heading("h1","header-nav__title", 'title_big') Авторизация
 header.header-blog#header
     div.header-left
         include icons.pug
-    div.header-center.blog__header-center    
+    div.header-center.header-blog-center    
         div.header-center__circle
             img(src='./img/avatar.jpg').header-center__circle_img
-        +heading("h1","blog-header__title") Блог
-        div.blog-header__subtitle Статьи, которые я написал
-        div.header-center__arrow-down.blog-header-center__arrow-down 
+        +heading("h1","header-blog-center__title", 'title_big', 'before-after-line') Блог
+        div.header-blog-center__subtitle Статьи, которые я написал
+        div.header-center__arrow-down.header-blog-center__arrow-down 
             a(href="#scroll")
                 i.fa.fa-chevron-down(aria-hidden="true")
     div.header-right
