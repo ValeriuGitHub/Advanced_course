@@ -70,6 +70,9 @@
         @include phones {
             width: 369.2px;
         }
+		.window-rotate {
+			transform: rotateY(180deg);
+		}
     }
     &__form_absolute {
         position: absolute;
