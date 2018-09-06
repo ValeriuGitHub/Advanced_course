@@ -13,6 +13,9 @@
 	&_beige {
 		fill: #eeebdf;
 		left: 0px;
+		@include tablets {
+		    fill: #efeee9;
+		}
 	}
 
 	&_absulutely-white {
@@ -24,11 +27,4 @@
 	}
 
   }
-
-}
-
-.triangle_fill_beige {
-	@include tablets {
-	    fill: #efeee9;
-	}
 }
