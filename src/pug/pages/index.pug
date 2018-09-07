@@ -24,11 +24,11 @@ block content
                 .welcome__navigation_table
                     ul.welcome__navigation
                         li.welcome__navigation-padding
-                            a(href="works.html").item__navigation.item__navigation-line  Мои работи
+                            a(href="works.html").item__navigation.item__navigation-line.item__navigation_block  Мои работи
                         li.welcome__navigation-padding
-                            a(href="about.html").item__navigation.item__navigation-line Обо мне
+                            a(href="about.html").item__navigation.item__navigation-line.item__navigation_block Обо мне
                         li.welcome__navigation-padding
-                            a(href="blog.html").item__navigation Блог
+                            a(href="blog.html").item__navigation.item__navigation_block Блог
             .window__form.window-rotate.login__form
                 +heading("h1","login__form-title", 'title', 'before-after-line') Авторизуйтесь
                 form(action="").index__form
@@ -58,10 +58,10 @@ block content
                     ul.login__navigation-list
                         li
                             a(href="#")
-                                .login__navigation-item.login__comeback.login__comeback-line На главную
+                                .login__navigation-item.login__comeback.login__comeback-line.item__navigation_block На главную
                         li
                             a(href="#")
-                                button(type="submit").login__navigation-item.login-button__enter.button__item-line-left.login__navigation-item.index__validate Войти
+                                button(type="submit").login__navigation-item.login-button__enter.button__item-line-left.login__navigation-item.index__validate.item__navigation_block Войти
         p.welcome__text-bottom
             span.welcome__text-bottom_line-after_display-block © Владимир Астахов
             | создано с любовью в LoftSchool | 2016

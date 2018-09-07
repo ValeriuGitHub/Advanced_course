@@ -34,6 +34,10 @@ html {
     @extend %big_title;
 }
 
+.item__navigation_block {
+    display: block;
+}
+
 .before-after-line {
     & span:after,
     & span:before { 

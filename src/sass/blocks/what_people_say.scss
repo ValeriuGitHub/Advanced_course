@@ -1,321 +1,322 @@
 .what-people-say {
-	background: url(./img/what_people-say.jpg) center center / cover no-repeat;
-	background-attachment: fixed;
-}
-
-.what-people-say__title {
-    @extend %big_title;
-    background: url(./img/about_header.png) center center /  no-repeat, url(./img/about.png) center center /  no-repeat;
-    text-align: center;
-    padding: 60px 120px 46px;
-    width: 516px;
-    margin: 0 auto;
-    line-height: 1.1;
-
-	& span {
-		position: relative;
-	}
-
-	& span:after, & span:before {
-		@extend %before_after_line;
-		top: 25%;
-
-		@include tablets {
-			top: 50%;
-		}
-	}
-
-	& span:after {
-		left: -40px;
-	}
-
-	& span:before {
-		right: -85px;
-
-		@include tablets {
-			right: -40px;
-		}
-
-		@include phones {
-			right: -60px;
-		}
-	}
+    background: url(./img/what_people-say.jpg) center center / cover no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 70px;
 
     @include laptops {
-    	width: 540px;
+        font-size: 26px;
     }
 
     @include tablets {
-    	width: 100%;
-    	font-size: 60px;
-    	padding: 60px 20px 43px;
+        font-size: 32px;
     }
 
     @include phones {
-    	padding: 30px 120px 25px;
-    	background-size: 90%;
-    	font-size: 35px;
-    	margin-top: 0px;
+        padding-bottom: 40px;
+    }
+    &__title {
+        background: url(./img/about_header.png) center center / no-repeat, url(./img/about.png) center center / no-repeat;
+        text-align: center;
+        padding: 60px 120px 46px;
+        width: 516px;
+        margin: 0 auto;
+        line-height: 1.1;
+
+        & span {
+            position: relative;
+        }
+
+        & span:after,
+        & span:before {
+            top: 25%;
+
+            @include tablets {
+                top: 50%;
+            }
+        }
+
+        & span:after {
+            left: -40px;
+        }
+
+        & span:before {
+            right: -85px;
+
+            @include tablets {
+                right: -40px;
+            }
+
+            @include phones {
+                right: -60px;
+            }
+        }
+
+        @include laptops {
+            width: 540px;
+        }
+
+        @include tablets {
+            width: 100%;
+            font-size: 49px;
+            padding: 60px 20px 43px;
+        }
+
+        @include phones {
+            padding: 30px 90px 25px;
+            background-size: 60%;
+            font-size: 42px;
+            margin-top: 0px;
+        }
     }
 }
 
 .review {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #455a64;
-	@extend %clearfix;
-
-	@include tablets {
-		justify-content: flex-start;
-    	margin-left: 25px;
-	}
-
-	@include phones {
-		display: block;
-		margin-left: 10px;
-	}
-}
-
-.review-left {
-	margin-right: 35px;
-
-	@include tablets {
-		margin-right: 32px;
-	}
-
-	@include phones {
-		margin-right: 0px;
-	    margin-bottom: 115px;
-	}
-}
-
-.review-left__text {
-	max-width: 365px;
-    margin-bottom: 25px;
-
-    @include phones {
-    	max-width: 100%;
-    }
-}
-
-.review-right__text {
-	max-width: 350px;
-    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #455a64;
+    @extend %clearfix;
 
     @include tablets {
-    	margin-bottom: 32px;
+        justify-content: flex-start;
+        margin-left: 25px;
     }
 
     @include phones {
-    	max-width: 100%;
+        display: block;
+        margin-left: 10px;
     }
-}
+	&__text {
+	    width: 350px;
+	    margin-bottom: 25px;
 
-.review__avatar-circle {
-    width: 77px;
-    height: 77px;
-    border-radius: 50%;
-    overflow: hidden;
-    float: left;
+        @include laptops {
+            font-size: 16px;
 
-    @include phones {
-    	width: 90px;
-    	height: 90px;
-    }
-}
+        }
 
-.review-right__quote, .review-left__quote {
-	color: #373e42;
-	font-size: 36px;
-	opacity: 0.2;
+	    @include tablets {
+	        margin-bottom: 32px;
+            font-size: 18px;
+            max-width: 320px;
+            width: 100%;
+            margin-right: 20px;
+	    }
 
-	@include phones {
-		text-align: center;
+	    @include phones {
+	        width: 100%;
+            max-width: 620px;
+            padding-right: 21px;
+            font-size: 18px;
+            line-height: 1.7;
+	    }
 	}
-}
+    &-left {
+        margin-right: 35px;
 
-.review-left__title, .review-left__description, .review-right__title, .review-right__description {
-    margin-left: 23px;
-    font-size: 16px;
-    color: #20b5a1;
+        @include tablets {
+            margin-right: 32px;
+        }
 
-    @include phones {
-    	float: none;
+        @include phones {
+            margin-right: 0px;
+            margin-bottom: 125px;
+        }
+        &__text {
+            width: 365px;
+
+            @include tablets { 
+                width: 100%;
+            }
+        }
     }
-}
+	&__avatar-circle {
+	    width: 77px;
+	    height: 77px;
+	    border-radius: 50%;
+	    overflow: hidden;
+	    float: left;
 
-.review-left__description {
-
-	@include phones { 
-		margin-bottom: 20px;
-		width: 100%;
+	    @include phones {
+	        width: 90px;
+	        height: 90px;
+	    }
 	}
-}
+	&__quote {
+	    color: #373e42;
+	    font-size: 36px;
+	    opacity: 0.2;
 
-.review-right__title, .review-left__title {
-	margin-top: 18px;
-	font-weight: 700;
-}
+	    @include phones {
+	        text-align: center;
+	    }
+	}
+	&__title,
+	&__description {
+	    margin-left: 23px;
+	    font-size: 16px;
+	    color: #20b5a1;
 
-.review_float {
-	float: left;
+        @include tablets {
+            float: none;
+            font-size: 19px;
+        }
+
+	    @include phones {
+	        float: none;
+            font-size: 18px;
+	    }
+	}
+	&-left__description {
+	    @include phones {
+	        margin-bottom: 20px;
+	        width: 100%;
+	    }
+	}
+	&__title {
+	    margin-top: 18px;
+	    font-weight: 700;
+	}
+	&_float {
+	    float: left;
+	}
 }
 
 .what-people-say__form {
-	width: 380px;
-	border-radius: 5px;
-	margin: 68px auto;
-	margin-bottom: 55px;
-	margin-top: 64px;
-	padding-top: 30px;
-	background: url(./img/works_blur.jpg) center center / cover no-repeat;
-
-	@include tablets {
-		margin-bottom: 115px;
-	}
-
-	@include phones {
-		margin-bottom: 40px;
-	}
-}
-
-.form__item {
-	margin: 20px;
-
-	&:first-child {
-		margin-top: 25px;
-	}
-
-	&:last-child {
-		margin-bottom: 15px;
-	}
-}
-
-.form__item-input {
+    width: 380px;
     border-radius: 5px;
-	width: 100%;
-	padding: 14.2px 20px 14.2px 20px;
-	color: rgba(55, 62, 66, 0.502);
-	border: none;
-	font-size: 16px;
-	border: 1px solid transparent;
+    margin: 68px auto;
+    margin-bottom: 55px;
+    margin-top: 64px;
+    padding-top: 30px;
+    background: url(./img/works_blur.jpg) center center / cover no-repeat;
 
-	&:focus {
-		border-color: #00bfa5;
-	}
-}
+    @include tablets {
+        margin-bottom: 115px;
+    }
 
-.form__item-textarea {
-	min-width: 340px;
-	min-height: 140px;
-	border-radius: 5px;
-	border: 1px solid transparent;
-	padding: 15.5px 20px 15.5px 20px;
-	font-size: 16px;
+    @include phones {
+        margin-bottom: 40px;
+    }
+    .form {
+        &__item {
+            & {
+                margin: 20px;
 
-	&:focus {
-		border-color: #00bfa5;
-	}
-}
+                &:first-child {
+                    margin-top: 25px;
+                }
 
-.link-up a {
-	color: #fff;
-	opacity: 0.7;
-}
+                &:last-child {
+                    margin-bottom: 15px;
+                }
+            }
+            &-input {
+                border-radius: 5px;
+                width: 100%;
+                padding: 14.2px 20px 14.2px 20px;
+                color: rgba(55, 62, 66, 0.502);
+                border: none;
+                font-size: 16px;
+                border: 1px solid transparent;
 
-.link-up {
-	text-align: center;
-	padding-bottom: 70px;
-	font-size: 28px;
+                &:focus {
+                    border-color: #00bfa5;
+                }
+            }
+            &-textarea {
+                min-width: 340px;
+                min-height: 140px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                padding: 15.5px 20px 15.5px 20px;
+                font-size: 16px;
 
-	@include laptops {
-		font-size: 26px;
-	}
+                &:focus {
+                    border-color: #00bfa5;
+                }
+            }
+        }
+        &__title {
+            text-align: center;
 
-	@include tablets {
-		font-size: 32px;
-	}
+            & span {
+                position: relative;
+            }
 
-	@include phones {
-		padding-bottom: 40px;
-	}
-}
+            & span:after,
+            & span:before {
+                top: 50%;
+            }
 
-.link-up a:hover {
-	opacity: 1;
-}
+            & span:after {
+                left: -40px;
+            }
 
-.form__title {
-	@extend %title_center;
+            & span:before {
+                right: -40px;
+            }
 
-	& span {
-		position: relative;
-	}
+            @include phones {
+                font-size: 25.4px;
+            }
 
-	& span:after, & span:before {
-		@extend %before_after_line;
-		top: 50%;
-	}
-
-	& span:after {
-		left: -40px;
-	}
-
-	& span:before {
-		right: -40px;
-	}
-
-	@include phones {
-		font-size: 25.4px;
-	}
-
-	@include tablets {
-		font-size: 30px;
-	}
+            @include tablets {
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 .list__button {
-	display: flex;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	margin-top: 10px;
+    display: flex;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 10px;
+    .button__item {
+        padding: 13.5px 57.6px;
+        padding-top: 14.3px;
+        color: #fff;
+        font-weight: 500;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        &-reset {
+            border-bottom-right-radius: 5px;
+            background-color: #26bbaa;
+            transition: 500ms;
+
+            &:hover {
+                background-color: #15613b;
+            }
+        }
+        &-send {
+            border-bottom-left-radius: 5px;
+            background-color: #268c8b;
+            transition: 500ms;
+
+            &:hover {
+                background-color: #1a9155;
+            }
+        }
+        &-line {
+            border-right: 1px solid #82cfc9;
+            &-left {
+                border-left: 1px solid #55919e;
+            }
+        }
+    }
 }
 
-.button__item {
-    padding: 13.5px 57.6px;
-    padding-top: 14.3px;
-    color: #fff;
-    font-weight: 500;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
+.link-up {
+    text-align: center;
+    font-size: 28px;
 
-.button__item-reset {
-	border-bottom-right-radius: 5px;
-	background-color: #26bbaa;
-    transition: 500ms;
-
-	&:hover {
-		background-color: #15613b;
-	}
-}
-
-.button__item-send {
-	border-bottom-left-radius: 5px;
-	background-color: #268c8b;
-    transition: 500ms;
-
-	&:hover {
-		background-color: #1a9155;
-	}
-}
-
-.button__item-line {
-	border-right: 1px solid #82cfc9;
-}
-
-.button__item_line-left {
-	border-left: 1px solid #55919e;
+    & a {
+        color: #fff;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }

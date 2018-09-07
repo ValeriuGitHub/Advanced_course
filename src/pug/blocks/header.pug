@@ -1,26 +1,26 @@
 nav.header-nav
     ul.header-nav__list
         li.header-nav__item
-            a(href="works.html") 
+            a(href="works.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Мои работы
         li.header-nav__item
-            a(href="blog.html") 
+            a(href="blog.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Блог
         li.header-nav__item
-            a(href="about.html") 
+            a(href="about.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Обо мне
         li.header-nav__item
-            a(href="index.html") 
+            a(href="index.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Авторизация
 header.header#header
     div.header-left
         include icons.pug
-    div.header-center    
+    div.header-center
         div.header-center__circle
             img(src='./img/avatar.jpg').header-center__circle_img
         h1.header-center__title Владимир Астахов
         div.header-center__subtitle Личний сайт веб разработчика
-        div.header-center__arrow-down 
+        div.header-center__arrow-down
             a(href="#scroll")
                 i.fa.fa-chevron-down(aria-hidden="true")
     div.header-right

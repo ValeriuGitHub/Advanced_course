@@ -1,26 +1,26 @@
 section.what-people-say
-    +heading("h1","what-people-say__title") Что обо мне говорят
+    +heading("h1","what-people-say__title", 'title_big', 'before-after-line') Что обо мне говорят
     .review
         .review-left
-            .review-left__quote
+            .review__quote
                 i.fa.fa-quote-left(aria-hidden="true")
-            p.review-left__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            p.review__text.review-left__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
             .review__avatar-circle
                 img(src="./img/works_avatar-left.jpg")
             .review_float
-                h2.review-left__title Ковальчук Дмитрий
-                .review-left__description основатель Loftschool
+                h2.review__title Ковальчук Дмитрий
+                .review__description основатель Loftschool
         .review-right
-            .review-right__quote
+            .review__quote
                 i.fa.fa-quote-left(aria-hidden="true")
-            p.review-right__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            p.review__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
             .review__avatar-circle
                 img(src="./img/works_avatar-right.jpg")
             .review_float
-                h2.review-right__title Сабанцев Владимир
-                .review-right__description преподаватель
+                h2.review__title Сабанцев Владимир
+                .review__description преподаватель
     .what-people-say__form
-        +heading('h1',"form__title") Связаться со мной
+        +heading('h1',"form__title", 'title', 'before-after-line') Связаться со мной
         form(action="")
             ul.list__form
                 li.form__item

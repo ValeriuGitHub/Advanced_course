@@ -243,13 +243,24 @@
                 width: 50%;
             }
         }
+        &__link {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            @include phones {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
         &__title {
             color: white;
             text-align: center;
             padding: 6.5vh;
-            width: 500px;
-            margin: 0 auto;
             transition: 700ms;
+
+            @include tablets {
+                font-size: 52px;
+            }
 
             @include phones {
                 font-size: 40px;
