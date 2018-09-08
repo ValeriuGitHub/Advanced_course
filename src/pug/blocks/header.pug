@@ -13,19 +13,21 @@ nav.header-nav
             a(href="index.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Авторизация
 header.header#header
-    div.header-left
-        include icons.pug
-    div.header-center
-        div.header-center__circle
-            img(src='./img/avatar.jpg').header-center__circle_img
-        h1.header-center__title Владимир Астахов
-        div.header-center__subtitle Личний сайт веб разработчика
+    div.header-top
+        div.header-top-left
+            include icons.pug
+        div.header-top-right
+            a(href="#").header-top-right__menu-burger
+                div.header-top-right__burger
+                div.header-top-right__burger
+                div.header-top-right__burger
+    div.header-bottom-center
+        div.header-center
+            div.header-center__circle
+                img(src='./img/avatar.jpg').header-center__circle_img
+            h1.header-center__title Владимир Астахов
+            div.header-center__subtitle Личний сайт веб разработчика
         div.header-center__arrow-down
             a(href="#scroll")
                 i.fa.fa-chevron-down(aria-hidden="true")
-    div.header-right
-        a(href="#").header__menu-burger
-            div.header-right__burger
-            div.header-right__burger
-            div.header-right__burger
 include triangles.pug

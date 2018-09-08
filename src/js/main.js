@@ -126,20 +126,20 @@ mobileBlogMenu();
 
 var BurgerMenu = function() {
   var nav = $(".header-nav");
-  var button = $(".header__menu-burger");
-  var buttonActive = $(".header__menu-burger_active");
+  var button = $(".header-top-right__menu-burger");
+  var buttonActive = $(".header-top-right__menu-burger_active");
 
-  $(".header__menu-burger").on('click', function(e){
+  $(".header-top-right__menu-burger").on('click', function(e){
     e.preventDefault();
     nav.fadeIn(0, function() {
         nav.toggleClass("header-nav_active");
-        $(".header-right__burger").toggleClass("header-right__burger_active");
+        $(".header-top-right__burger").toggleClass("header-top-right__burger_active");
         button.toggleClass("header__menu-burger_active");
     });
   });
   buttonActive.on('click', function(e){
     e.preventDefault();
-    button.removeClass("header__menu-burger_active");
+    button.removeClass("header-top-right__menu-burger_active");
   });
 }
 

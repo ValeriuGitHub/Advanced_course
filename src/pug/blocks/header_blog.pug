@@ -1,31 +1,33 @@
 nav.header-nav
     ul.header-nav__list
         li.header-nav__item
-            a(href="works.html") 
+            a(href="works.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Мои работы
         li.header-nav__item
-            a(href="blog.html") 
+            a(href="blog.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Блог
         li.header-nav__item
-            a(href="about.html") 
+            a(href="about.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Обо мне
         li.header-nav__item
-            a(href="index.html") 
+            a(href="index.html").header-nav__link
                 +heading("h1","header-nav__title", 'title_big') Авторизация
-header.header-blog#header
-    div.header-left
-        include icons.pug
-    div.header-center.header-blog-center    
-        div.header-center__circle
-            img(src='./img/avatar.jpg').header-center__circle_img
-        +heading("h1","header-blog-center__title", 'title_big', 'before-after-line') Блог
-        div.header-blog-center__subtitle Статьи, которые я написал
-        div.header-center__arrow-down.header-blog-center__arrow-down 
-            a(href="#scroll")
-                i.fa.fa-chevron-down(aria-hidden="true")
-    div.header-right
-        a(href="#").header__menu-burger
-            div.header-right__burger
-            div.header-right__burger
-            div.header-right__burger
+header.header.header-blog#header
+    div.header-top
+        div.header-top-left
+            include icons.pug
+        div.header-top-right
+            a(href="#").header-top-right__menu-burger
+                div.header-top-right__burger
+                div.header-top-right__burger
+                div.header-top-right__burger
+    div.header-bottom-center
+        div.header-center
+            div.header-center__circle.header-blog-center    
+                img(src='./img/avatar.jpg').header-center__circle_img
+            +heading("h1","header-blog-center__title", 'title_big', 'before-after-line') Блог
+            div.header-blog-center__subtitle Статьи, которые я написал
+            div.header-center__arrow-down.header-blog-center__arrow-down 
+                a(href="#scroll")
+                    i.fa.fa-chevron-down(aria-hidden="true")
 include triangles.pug

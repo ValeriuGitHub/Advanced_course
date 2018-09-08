@@ -14,12 +14,12 @@
         padding-bottom: 20px;
         display: flex;
         border-bottom: 1px solid #61676a;
+        justify-content: space-between;
 
         @include tablets {
             display: block;
         }
         &-right {
-            width: 50%;
             justify-content: flex-end;
             display: flex;
 
@@ -48,8 +48,6 @@
             }
         }
         &-left {
-            width: 50%;
-
             @include tablets {
                 width: 100%;
             }
@@ -86,13 +84,12 @@
         display: flex;
         color: rgba(255, 255, 255, 0.5);
         font-weight: 300;
+        justify-content: space-between;
 
         @include tablets {
             display: block;
         }
         &-left {
-            width: 50%;
-
             @include tablets {
                 width: 100%;
             }
@@ -112,9 +109,6 @@
             }
         }
         &-right {
-            width: 50%;
-            justify-content: flex-end;
-            display: flex;
             margin-top: 8px;
 
             @include tablets {
