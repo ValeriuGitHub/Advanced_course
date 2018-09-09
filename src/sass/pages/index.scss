@@ -111,8 +111,6 @@
         display: table-row;
         background-color: #08ac99;
         &-padding {
-            // padding-top: 11.5px;
-            // padding-bottom: 11.5px;
             display: table-cell;
             .item__navigation {
                 padding: 11.5px 31.4px;
@@ -157,20 +155,6 @@
 
         @include phones {
             padding-bottom: 10px;
-        }
-        &_line-after_display-block {
-
-            &:after {
-                content: "| ";
-
-                @include phones {
-                    content: "";
-                }
-            }
-            @include phones {
-                display: block;
-                padding-bottom: 4px;
-            }
         }
     }
 }

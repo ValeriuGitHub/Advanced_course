@@ -2,6 +2,9 @@ extends ../templates/page.pug
 block variables
     - var title = "Welcome";
 block content
+    .input-error
+            .send-message__text.send-message__text_width Потдвердите, что вы не робот
+            a(href="#").send-message__btn#send-message__close-error Закрыть
     section.welcome
         .welcome__button-wrapper
             a(href="#").welcome__button Авторизоваться
@@ -63,7 +66,9 @@ block content
                             a(href="#")
                                 button(type="submit").login__navigation-item.login-button__enter.button__item-line-left.login__navigation-item.index__validate.item__navigation_block Войти
         p.welcome__text-bottom
-            span.welcome__text-bottom_line-after_display-block © Владимир Астахов
-            | создано с любовью в LoftSchool | 2016
+            span.welcome__text-bottom_line-after_display-block © Владимир Астахов | создано с любовью в LoftSchool | 2016
+        .send-message__welcome
+            .send-message__text Добро пожаловать
+            a(href="#").send-message__btn#send-message__close_welcome Закрыть
 
 

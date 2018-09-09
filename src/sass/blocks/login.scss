@@ -244,32 +244,25 @@
     &+.login__item-square {
         color: #e44845;
     }
-    .input {
-        &-error {
+}
+
+.input {
+    &-error {
+        display: none;
+        &_active {
+            display: block;
             border-radius: 5px;
-            background-color: #e44845;
             color: #fff;
             position: absolute;
-            top: 105%;
-            left: 65px;
-            font-weight: 500;
-            padding: 14px 20px;
-            z-index: 20;
-            width: 180px;
-
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                border: 9px solid #e44845;
-                border-top-color: transparent;
-                border-left-color: transparent;
-                border-right-color: transparent;
-                bottom: 100%;
-                left: 50%;
-                -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-            }
+            z-index: 14;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            width: 240px;
+            padding: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
     }
 }
@@ -282,21 +275,30 @@
     }
 }
 
-.send-message {
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    width: 280px;
-    padding: 20px;
-    top: 50%;
-    left: 50%;
-    z-index: 15;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.send-message, .send-message__welcome {
+    display: none;
+        &_active {
+        display: block;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        width: 280px;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        z-index: 15;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
     &__text {
         margin: 0 auto 18px;
         color: #373e42;
+        z-index: 25;
+        &_width {
+            width: 140px;
+            color: #455a64;
+        }
     }
     &_top-75 {
         top: 67.5%;
