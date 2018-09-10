@@ -1,8 +1,70 @@
-extends ../templates/common.pug
+extend ../templates/common.pug
 block variables
     - var title = "About";
     - var bg_triangle1 = "triangle_fill_white";
     - var bg_triangle2 = "triangle_fill_beige";
 block inner
-    include ../blocks/about.pug
-    include ../blocks/map.pug
+    section.about#scroll
+        div.about-left
+            +heading('h1', 'about-left__title', 'before-after-line', 'title_big')
+                | Обо мне
+            div.user
+                img(src='./img/avatar.jpg').user__avatar
+                +heading('h2', 'user__title', 'before-after-line', 'title') Кто я
+                .user__text-wrapper
+                    p.user__text Я веб разработчик из Новосибирска. Мне 27 лет.  Я занимаюсь разработкой современных сайтов  и приложений. Мне нравится делать интересные  и современные проекты. 
+                    p.user__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        div.about-right
+            +heading('h2','about-right__title', 'before-after-line', 'title') Чем я могу быть вам полезен
+            p.about-right__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            ul.skills
+                li.skills__item
+                    .skill-section__title 
+                        h2| Frontend
+                    .skills-section__item-wrapper
+                        .skills-section__item
+                            .circles__value 90
+                            span.skill
+                                | HTML5
+                        .skills-section__item
+                            .circles__value 85
+                            span.skill
+                                | CSS3
+                        .skills-section__item
+                            .circles__value 85
+                            span.skill 
+                                |  JavaScript &amp Jquery
+                li.skills__item
+                    .skill-section__title 
+                            h2| Backend
+                    .skills-section__item-wrapper
+                        .skills-section__item
+                            .circles__value 40
+                            span.skill
+                                | PHP
+                        .skills-section__item
+                            .circles__value 55
+                            span.skill
+                                | mySQl
+                        .skills-section__item
+                            .circles__value 35
+                            span.skill
+                                | Node.Js & npm 
+                        .skills-section__item
+                            .circles__value 60
+                            span.skill
+                                | Mongo.db
+                li.skills__item
+                    .skill-section__title 
+                            h2  WorkFlow
+                    .skills-section__item-wrapper
+                        .skills-section__item
+                            .circles__value 80
+                            span.skill Git
+                        .skills-section__item
+                            .circles__value 70
+                            span.skill Gulp
+                        .skills-section__item
+                            .circles__value 60
+                            span.skill Bower
+    include ../blocks/about/map.pug
