@@ -433,64 +433,105 @@ $(window).scroll(function() {
 
 // Blog navigation
 
-var blogNav = function() {
-    var aside = $(".aside-nav");
-    if (aside.length) {
-        var menu = $(".nav");
-        var item = $(".nav__item");
+// var blogNav = function() {
+//     var aside = $(".aside-nav");
+//     if (aside.length) {
+//         var menu = $(".nav");
+//         var item = $(".nav__item");
 
-        var item1 = $(".nav__item1");
-        var item2 = $(".nav__item2");
-        var item3 = $(".nav__item3");
-        var item4 = $(".nav__item4");
+//         var item1 = $(".nav__item1");
+//         var item2 = $(".nav__item2");
+//         var item3 = $(".nav__item3");
+//         var item4 = $(".nav__item4");
 
-        var navOffset = aside.offset().top;
+//         var navOffset = aside.offset().top;
 
-        var itemOffset1 = $("#blog__text1").offset().top - 200;
-        var itemOffset2 = $("#blog__text2").offset().top;
-        var itemOffset3 = $("#blog__text3").offset().top;
-        var itemOffset4 = $("#blog__text4").offset().top;
+//         var itemOffset1 = $("#blog__text1").offset().top - 200;
+//         var itemOffset2 = $("#blog__text2").offset().top;
+//         var itemOffset3 = $("#blog__text3").offset().top;
+//         var itemOffset4 = $("#blog__text4").offset().top;
 
-        $(window).scroll(function() {
-            var scrollPos = $(window).scrollTop();
+//         $(window).scroll(function() {
+//             var scrollPos = $(window).scrollTop();
 
-            if (scrollPos >= navOffset) {
-                aside.addClass("aside-nav_active");
-                menu.addClass("nav_active");
-            } else {
-                aside.removeClass("aside-nav_active");
-                menu.removeClass("nav_active");
-            }
+//             if (scrollPos >= navOffset) {
+//                 aside.addClass("aside-nav_active");
+//                 menu.addClass("nav_active");
+//             } else {
+//                 aside.removeClass("aside-nav_active");
+//                 menu.removeClass("nav_active");
+//             }
 
-            if (scrollPos >= itemOffset1) {
-                item1.addClass("nav__item_active");
-            } else {
-                item1.removeClass("nav__item_active");
-            }
+//             if (scrollPos >= itemOffset1) {
+//                 item1.addClass("nav__item_active");
+//             } else {
+//                 item1.removeClass("nav__item_active");
+//             }
 
-            if (scrollPos >= itemOffset2) {
-                item1.removeClass("nav__item_active");
-                item2.addClass("nav__item_active");
-            } else {
-                item2.removeClass("nav__item_active");
-            }
+//             if (scrollPos >= itemOffset2) {
+//                 item1.removeClass("nav__item_active");
+//                 item2.addClass("nav__item_active");
+//             } else {
+//                 item2.removeClass("nav__item_active");
+//             }
 
-            if (scrollPos >= itemOffset3) {
-                item2.removeClass("nav__item_active");
-                item3.addClass("nav__item_active");
-            } else {
-                item3.removeClass("nav__item_active");
-            }
+//             if (scrollPos >= itemOffset3) {
+//                 item2.removeClass("nav__item_active");
+//                 item3.addClass("nav__item_active");
+//             } else {
+//                 item3.removeClass("nav__item_active");
+//             }
 
-            if (scrollPos >= itemOffset4) {
-                item3.removeClass("nav__item_active");
-                item4.addClass("nav__item_active");
-            } else {
-                item4.removeClass("nav__item_active");
-            }
+//             if (scrollPos >= itemOffset4) {
+//                 item3.removeClass("nav__item_active");
+//                 item4.addClass("nav__item_active");
+//             } else {
+//                 item4.removeClass("nav__item_active");
+//             }
 
-        });
-    }
+//         });
+//     }
+// }
+
+// blogNav();
+
+var blogNav = function(){
+    var aside = $(".aside-nav"),
+        menu = $(".nav"),
+        item = $(".nav__item"),
+        itemBlock = $(".item__navigation_block"),
+        itemActive = $(".nav__item_active"),
+        navOffset = item.offset().top;
+
+    // item.click(function(e){
+    //     e.preventDefault();
+    //     item.eq($(this).index()).addClass("nav__item_active");
+    // });
+
+    var itemOffset = item.eq($(this).index()).offset().top,
+        nextItemOffset = item.eq($(this).index() + 1).offset().top;
+
+        console.log(itemOffset);
+        console.log(nextItemOffset);
+
+    $(window).scroll(function(){
+        var scrollPos = $(window).scrollTop();
+        console.log(scrollPos);
+        // console.log("navOffset =", navOffset);
+        if(scrollPos >= navOffset) {
+            aside.addClass("aside-nav_active");
+            menu.addClass("nav_active");
+        } else {
+            aside.removeClass("aside-nav_active");
+            menu.removeClass("nav_active");
+        }
+
+        // if(scrollPos >= itemOffset) {
+        //     item.eq($(this).index() + 1).addClass("nav__item_active");
+        // } else {
+        //     item.eq($(this).index() - 1).removeClass("nav__item_active");
+        // }
+    })
 }
 
 blogNav();
